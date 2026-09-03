@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-device_slowdown-fastest_device-seed-3",
+  "scenario_id": "device_slowdown",
+  "scheduler_name": "fastest_device",
+  "seed": 3,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 94,
+  "assigned_requests": 94,
+  "completed_requests": 94,
+  "rejected_requests": 0,
+  "deadlines_met": 94,
+  "deadline_misses": 0,
+  "useful_valid_predictions": 93,
+  "correct_predictions": 93,
+  "deadline_satisfaction_rate": 1.0,
+  "useful_goodput_requests_per_second": 4.65,
+  "mean_end_to_end_latency_ms": 73.86771633702118,
+  "p95_end_to_end_latency_ms": 74.08441115999877,
+  "actual_prediction_accuracy": 0.9893617021276596,
+  "total_estimated_energy_units": 93.37693021999999,
+  "estimated_energy_per_completed_request_units": 0.9933715980851063,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 21.254935679982736,
+      "utilization": 0.001062746783999137
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 0.0,
+      "utilization": 0.0
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 0.0,
+      "utilization": 0.0
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 94,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

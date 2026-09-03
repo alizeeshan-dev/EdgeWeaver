@@ -1,0 +1,23 @@
+scenario_id: network_slowdown
+description: Normal arrivals while the mobile-to-edge-server path degrades mid-run and recovers.
+simulation_duration_ms: 20000.0
+random_seed: 42
+arrival:
+  base_rate_per_second: 4.0
+  bursts: []
+deadline_distribution:
+  values_ms: [100.0, 180.0, 300.0]
+  weights: [0.20, 0.45, 0.35]
+minimum_accuracy_distribution:
+  values: [0.90, 0.93, 0.95]
+  weights: [0.45, 0.35, 0.20]
+request_input:
+  source_device_id: mobile
+  size_mode: dataset_row
+network_slowdown:
+  link_id: mobile-to-edge-server
+  start_time_ms: 7000.0
+  end_time_ms: 14000.0
+  base_latency_multiplier: 3.0
+  bandwidth_multiplier: 0.25
+

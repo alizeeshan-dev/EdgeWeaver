@@ -1,0 +1,17 @@
+{
+  "model_id": "logistic-regression-v1",
+  "display_name": "Light Model",
+  "accuracy": 0.9548693586698337,
+  "macro_f1": 0.9547672182463143,
+  "model_size_bytes": 25661,
+  "local_latency_ms_mean": 0.2460062,
+  "local_latency_ms_median": 0.2363,
+  "local_latency_ms_std": 0.03125110528541351,
+  "local_latency_ms_p95": 0.3364399999999998,
+  "profile_kind": "measured",
+  "computational_role": "light",
+  "profiling_prediction_count": 500,
+  "profiling_seed": 2027,
+  "raw_latency_observations_file": "logistic-regression-v1.timings.json",
+  "notes": "Measured on this local computer only; other EdgeWeaver devices remain simulated through separate speed multipliers."
+}

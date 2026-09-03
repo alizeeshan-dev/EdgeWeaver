@@ -1,0 +1,17 @@
+scenario_id: normal
+description: Moderate stable arrivals with relaxed mixed deadlines and stable runtime conditions.
+simulation_duration_ms: 20000.0
+random_seed: 42
+arrival:
+  base_rate_per_second: 4.0
+  bursts: []
+deadline_distribution:
+  values_ms: [100.0, 180.0, 300.0]
+  weights: [0.20, 0.45, 0.35]
+minimum_accuracy_distribution:
+  values: [0.90, 0.93, 0.95]
+  weights: [0.45, 0.35, 0.20]
+request_input:
+  source_device_id: mobile
+  size_mode: dataset_row
+

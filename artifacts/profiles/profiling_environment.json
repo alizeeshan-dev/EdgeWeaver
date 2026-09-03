@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "profiled_at_utc": "2026-09-02T19:35:47.050207Z",
+  "measurement_scope": "this local computer only",
+  "operating_system": "Windows",
+  "platform_description": "Windows-11-10.0.26200-SP0",
+  "system_release": "11",
+  "system_version": "10.0.26200",
+  "machine": "AMD64",
+  "architecture": "64bit",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "python_version": "3.13.5",
+  "python_implementation": "CPython",
+  "library_versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.6.0"
+  },
+  "timer": "time.perf_counter_ns",
+  "methodology": "Artifacts and dataset are loaded before timing; each observation includes saved preprocessor.transform plus estimator.predict for exactly one test sample. Warm-ups are untimed. Timer overhead is not subtracted.",
+  "warmup_predictions_per_model": 20,
+  "timed_predictions_per_model": 500,
+  "profiling_seed": 2027,
+  "percentile_method": "linear",
+  "standard_deviation_ddof": 0
+}

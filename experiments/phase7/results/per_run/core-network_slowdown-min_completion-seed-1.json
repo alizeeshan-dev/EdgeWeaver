@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-network_slowdown-min_completion-seed-1",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "min_completion",
+  "seed": 1,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 70,
+  "assigned_requests": 70,
+  "completed_requests": 70,
+  "rejected_requests": 0,
+  "deadlines_met": 70,
+  "deadline_misses": 0,
+  "useful_valid_predictions": 67,
+  "correct_predictions": 67,
+  "deadline_satisfaction_rate": 1.0,
+  "useful_goodput_requests_per_second": 3.35,
+  "mean_end_to_end_latency_ms": 0.615015499999689,
+  "p95_end_to_end_latency_ms": 0.6150155000000268,
+  "actual_prediction_accuracy": 0.9571428571428572,
+  "total_estimated_energy_units": 43.051085,
+  "estimated_energy_per_completed_request_units": 0.6150155,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 0.0,
+      "utilization": 0.0
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 0.0,
+      "utilization": 0.0
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 43.05108499997732,
+      "utilization": 0.002152554249998866
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 70,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-device_slowdown-round_robin-seed-4",
+  "scenario_id": "device_slowdown",
+  "scheduler_name": "round_robin",
+  "seed": 4,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 95,
+  "assigned_requests": 95,
+  "completed_requests": 95,
+  "rejected_requests": 0,
+  "deadlines_met": 95,
+  "deadline_misses": 0,
+  "useful_valid_predictions": 93,
+  "correct_predictions": 93,
+  "deadline_satisfaction_rate": 1.0,
+  "useful_goodput_requests_per_second": 4.65,
+  "mean_end_to_end_latency_ms": 33.12518474821085,
+  "p95_end_to_end_latency_ms": 74.08441115999813,
+  "actual_prediction_accuracy": 0.9789473684210527,
+  "total_estimated_energy_units": 77.04129423,
+  "estimated_energy_per_completed_request_units": 0.8109609918947369,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 7.8229971599976125,
+      "utilization": 0.00039114985799988065
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 10.233857920007722,
+      "utilization": 0.0005116928960003861
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 19.680495999989944,
+      "utilization": 0.0009840247999994972
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 95,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

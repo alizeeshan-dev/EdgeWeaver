@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "model_id": "logistic-regression-v1",
+  "display_name": "Light Model",
+  "computational_role": "light",
+  "random_seed": 2027,
+  "estimator_class": "LogisticRegression",
+  "preprocessor_class": "StandardScaler",
+  "hyperparameters": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "tol": 0.0001
+  },
+  "feature_count": 561,
+  "class_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "train_sample_count": 7352,
+  "test_sample_count": 2947,
+  "accuracy": 0.9548693586698337,
+  "macro_f1": 0.9547672182463143,
+  "model_artifact": "model.joblib",
+  "preprocessor_artifact": "preprocessor.joblib",
+  "model_size_bytes": 25661,
+  "preprocessor_size_bytes": 12946,
+  "dataset_name": "UCI Human Activity Recognition Using Smartphones",
+  "dataset_split": "official predefined train/test split",
+  "sklearn_version": "1.9.0",
+  "trained_at_utc": "2026-09-02T19:35:02.335355Z",
+  "training_iterations": null,
+  "final_training_loss": null
+}

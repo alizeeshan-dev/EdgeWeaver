@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "core-bursty-min_completion-seed-4",
+  "kind": "core",
+  "scenario_id": "bursty",
+  "scheduler_name": "min_completion",
+  "seed": 4,
+  "identity_sha256": "ba1a164d1fe411b292cad5174bde6772d5d1184c38bd25345d8f888d68ccbffa",
+  "trace_id": "bursty-seed-4",
+  "trace_reference": "experiments/phase7/traces/bursty-seed-4-1bb862a19f6b.json",
+  "trace_sha256": "c8e4dec737a205ea5231f02fe03d4e2a304c81531bed3e4fcfc7a9167ab0f171",
+  "scenario_config_sha256": "1bb862a19f6b7221ec4c54ebfcfdbcd5b463316c2d23d029843af8d12aff1d32",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/bursty.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 96,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:46.556029Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/core-bursty-min_completion-seed-4.json",
+    "event_log": "experiments/phase7/raw/events/core-bursty-min_completion-seed-4.json",
+    "summary_json": "experiments/phase7/results/per_run/core-bursty-min_completion-seed-4.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/core-bursty-min_completion-seed-4.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "0aa283884d99da62dda444670899e260c074f6cc1a8bf8ae7b4daa4921e31a17",
+    "event_log": "ff7461c5df889a2c6ac5db4cb3773244e0b4ba607b719588746cfbee90a1db1c",
+    "summary_json": "67a94caeae3bb504d9c0513adc277d4aad2929c787ca290e412610f98ab3bf6a",
+    "summary_csv": "2d24917a2b6d9616cb88c7516b529101070b9952b490ecfb181f11bbe66ec4dd"
+  }
+}

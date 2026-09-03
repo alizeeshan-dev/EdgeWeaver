@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "profiled_at_utc": "2026-09-02T19:35:47.050207Z",
+  "environment_metadata_file": "profiling_environment.json",
+  "profile_files": [
+    "logistic-regression-v1.json",
+    "random-forest-v1.json",
+    "mlp-v1.json"
+  ]
+}

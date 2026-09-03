@@ -1,0 +1,65 @@
+{
+  "scheduler_name": "phase3-fixed-verification",
+  "decisions": [
+    {
+      "request_id": "request-0001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "predicted_completion_ms": 0.6150155,
+      "predicted_energy_units": 0.6150155,
+      "predicted_model_accuracy": 0.9548693586698337,
+      "expected_to_meet_deadline": true,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    },
+    {
+      "request_id": "request-0002",
+      "device_id": "gateway",
+      "model_id": "random-forest-v1",
+      "predicted_completion_ms": 46.27911850000001,
+      "predicted_energy_units": 33.00554325000001,
+      "predicted_model_accuracy": 0.9284017645062775,
+      "expected_to_meet_deadline": true,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    },
+    {
+      "request_id": "request-0003",
+      "device_id": "edge-server",
+      "model_id": "mlp-v1",
+      "predicted_completion_ms": 84.84336584,
+      "predicted_energy_units": 0.89596961,
+      "predicted_model_accuracy": 0.9457074991516796,
+      "expected_to_meet_deadline": true,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    },
+    {
+      "request_id": "request-0004",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "predicted_completion_ms": 84.78920372,
+      "predicted_energy_units": 0.6793211299999999,
+      "predicted_model_accuracy": 0.9548693586698337,
+      "expected_to_meet_deadline": false,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    },
+    {
+      "request_id": "request-0005",
+      "device_id": "gateway",
+      "model_id": "mlp-v1",
+      "predicted_completion_ms": 49.25795932,
+      "predicted_energy_units": 0.9632248900000001,
+      "predicted_model_accuracy": 0.9457074991516796,
+      "expected_to_meet_deadline": true,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    },
+    {
+      "request_id": "request-0006",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "predicted_completion_ms": 41.6150155,
+      "predicted_energy_units": 0.6150155,
+      "predicted_model_accuracy": 0.9548693586698337,
+      "expected_to_meet_deadline": true,
+      "decision_reason": "Explicit Phase 3 engine-verification assignment; not a policy."
+    }
+  ]
+}

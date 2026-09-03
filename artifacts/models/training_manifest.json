@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "trained_at_utc": "2026-09-02T19:35:02.335355Z",
+  "random_seed": 2027,
+  "dataset_root": "D:\\EdgeWeaver\\data\\raw\\UCI HAR Dataset",
+  "model_directories": [
+    "logistic-regression-v1",
+    "random-forest-v1",
+    "mlp-v1"
+  ]
+}

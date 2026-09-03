@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "core-normal-edgeweaver-seed-2",
+  "kind": "core",
+  "scenario_id": "normal",
+  "scheduler_name": "edgeweaver",
+  "seed": 2,
+  "identity_sha256": "86f0511b99493f6834e19088c0593493e5ff68dc4d03e85c3f2897516c23de8a",
+  "trace_id": "normal-seed-2",
+  "trace_reference": "experiments/phase7/traces/normal-seed-2-edffbdaae837.json",
+  "trace_sha256": "bb521b80f903152fd9734d7ae92e72d144417b58e0e814fd90930dfe31432325",
+  "scenario_config_sha256": "edffbdaae8378490cb6357dab8d3c15bea71565f815e6496dcad3ac8af97cc2b",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/normal.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 82,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:44.382333Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/core-normal-edgeweaver-seed-2.json",
+    "event_log": "experiments/phase7/raw/events/core-normal-edgeweaver-seed-2.json",
+    "summary_json": "experiments/phase7/results/per_run/core-normal-edgeweaver-seed-2.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/core-normal-edgeweaver-seed-2.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "864c8ca59e33ae2ba2ad9d065ce062d876c1f3da11b3c05f5b3dbf91401b83b2",
+    "event_log": "93ea8f99183449e4560a8ecc2bff41a2756dcf26c2e1d447c92c09ef232ea622",
+    "summary_json": "41053fef8508d701a0b9b3b6c44ceeb23d2e75769b3b2186017586f951e1008b",
+    "summary_csv": "009ac43c89bb9cb7ef44b59a8b5d3f4c59c683844e51b733f279972a66d4925d"
+  }
+}

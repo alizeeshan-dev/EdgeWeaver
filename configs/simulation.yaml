@@ -1,0 +1,7 @@
+run_id: phase3-representative
+random_seed: 2027
+scheduler_overhead_ms: 0.0
+network_energy_per_kilobyte: 0.02
+return_payload_size_bytes: 64
+representative_latency_statistic: mean
+edgeweaver_ewma_alpha: 0.2

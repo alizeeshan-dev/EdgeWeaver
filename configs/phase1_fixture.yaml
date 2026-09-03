@@ -1,0 +1,47 @@
+scenario_id: phase1-five-request-fixture
+description: Synthetic deterministic local-only fixture; not an experimental workload.
+random_seed: 2027
+device_id: mobile
+model_id: light
+requests:
+  - request_id: request-001
+    arrival_time_ms: 0.0
+    deadline_ms: 3.0
+    minimum_accuracy: 0.50
+    input_size_bytes: 4096
+    source_device_id: mobile
+    true_label: 0
+    feature_vector_id: 0
+  - request_id: request-002
+    arrival_time_ms: 0.5
+    deadline_ms: 3.0
+    minimum_accuracy: 0.50
+    input_size_bytes: 4096
+    source_device_id: mobile
+    true_label: 1
+    feature_vector_id: 1
+  - request_id: request-003
+    arrival_time_ms: 1.0
+    deadline_ms: 6.0
+    minimum_accuracy: 0.50
+    input_size_bytes: 4096
+    source_device_id: mobile
+    true_label: 2
+    feature_vector_id: 2
+  - request_id: request-004
+    arrival_time_ms: 1.5
+    deadline_ms: 6.0
+    minimum_accuracy: 0.50
+    input_size_bytes: 4096
+    source_device_id: mobile
+    true_label: 3
+    feature_vector_id: 3
+  - request_id: request-005
+    arrival_time_ms: 2.5
+    deadline_ms: 8.0
+    minimum_accuracy: 0.50
+    input_size_bytes: 4096
+    source_device_id: mobile
+    true_label: 4
+    feature_vector_id: 4
+

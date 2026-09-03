@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-network_slowdown-round_robin-seed-5",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "round_robin",
+  "seed": 5,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 80,
+  "assigned_requests": 80,
+  "completed_requests": 80,
+  "rejected_requests": 0,
+  "deadlines_met": 72,
+  "deadline_misses": 8,
+  "useful_valid_predictions": 68,
+  "correct_predictions": 76,
+  "deadline_satisfaction_rate": 0.9,
+  "useful_goodput_requests_per_second": 3.4,
+  "mean_end_to_end_latency_ms": 51.877114160499914,
+  "p95_end_to_end_latency_ms": 224.7140037199988,
+  "actual_prediction_accuracy": 0.95,
+  "total_estimated_energy_units": 53.93787187,
+  "estimated_energy_per_completed_request_units": 0.674223398375,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 3.8376967199910723,
+      "utilization": 0.00019188483599955362
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 8.634817619997193,
+      "utilization": 0.00043174088099985966
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 16.605418499992084,
+      "utilization": 0.0008302709249996042
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 80,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 8,
+      "rate": 1.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

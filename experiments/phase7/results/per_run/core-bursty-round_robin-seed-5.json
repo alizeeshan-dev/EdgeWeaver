@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-bursty-round_robin-seed-5",
+  "scenario_id": "bursty",
+  "scheduler_name": "round_robin",
+  "seed": 5,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 95,
+  "assigned_requests": 95,
+  "completed_requests": 95,
+  "rejected_requests": 0,
+  "deadlines_met": 95,
+  "deadline_misses": 0,
+  "useful_valid_predictions": 89,
+  "correct_predictions": 89,
+  "deadline_satisfaction_rate": 1.0,
+  "useful_goodput_requests_per_second": 4.45,
+  "mean_end_to_end_latency_ms": 33.091002834105154,
+  "p95_end_to_end_latency_ms": 73.78920371999993,
+  "actual_prediction_accuracy": 0.9368421052631579,
+  "total_estimated_energy_units": 64.05216687,
+  "estimated_energy_per_completed_request_units": 0.6742333354736841,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 4.575715319988376,
+      "utilization": 0.0002287857659994188
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 10.23385791999317,
+      "utilization": 0.0005116928959996585
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 19.680495999989944,
+      "utilization": 0.0009840247999994972
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 95,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

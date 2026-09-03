@@ -1,0 +1,17 @@
+{
+  "model_id": "random-forest-v1",
+  "display_name": "Balanced Model",
+  "accuracy": 0.9284017645062775,
+  "macro_f1": 0.9264036007617844,
+  "model_size_bytes": 2568840,
+  "local_latency_ms_mean": 12.660245000000002,
+  "local_latency_ms_median": 12.253900000000002,
+  "local_latency_ms_std": 1.2246749532488204,
+  "local_latency_ms_p95": 14.896039999999998,
+  "profile_kind": "measured",
+  "computational_role": "balanced",
+  "profiling_prediction_count": 500,
+  "profiling_seed": 2027,
+  "raw_latency_observations_file": "random-forest-v1.timings.json",
+  "notes": "Measured on this local computer only; other EdgeWeaver devices remain simulated through separate speed multipliers."
+}

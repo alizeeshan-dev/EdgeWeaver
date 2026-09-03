@@ -1,0 +1,17 @@
+{
+  "model_id": "mlp-v1",
+  "display_name": "Heavy Model",
+  "accuracy": 0.9457074991516796,
+  "macro_f1": 0.9457678990182412,
+  "model_size_bytes": 1858312,
+  "local_latency_ms_mean": 0.33627640000000003,
+  "local_latency_ms_median": 0.32805,
+  "local_latency_ms_std": 0.03485504731082716,
+  "local_latency_ms_p95": 0.3721199999999999,
+  "profile_kind": "measured",
+  "computational_role": "heavy",
+  "profiling_prediction_count": 500,
+  "profiling_seed": 2027,
+  "raw_latency_observations_file": "mlp-v1.timings.json",
+  "notes": "Measured on this local computer only; other EdgeWeaver devices remain simulated through separate speed multipliers."
+}

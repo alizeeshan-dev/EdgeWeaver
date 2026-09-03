@@ -1,0 +1,82 @@
+{
+  "format_version": "edgeweaver-run-metrics-v1",
+  "run_id": "core-network_slowdown-round_robin-seed-3",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "round_robin",
+  "seed": 3,
+  "simulation_duration_ms": 20000.0,
+  "total_requests": 78,
+  "assigned_requests": 78,
+  "completed_requests": 78,
+  "rejected_requests": 0,
+  "deadlines_met": 73,
+  "deadline_misses": 5,
+  "useful_valid_predictions": 72,
+  "correct_predictions": 76,
+  "deadline_satisfaction_rate": 0.9358974358974359,
+  "useful_goodput_requests_per_second": 3.6,
+  "mean_end_to_end_latency_ms": 47.958880888205464,
+  "p95_end_to_end_latency_ms": 224.7140037199988,
+  "actual_prediction_accuracy": 0.9743589743589743,
+  "total_estimated_energy_units": 52.594333999999996,
+  "estimated_energy_per_completed_request_units": 0.6742863333333333,
+  "device_utilization": [
+    {
+      "device_id": "edge-server",
+      "busy_time_ms": 3.6900930000010703,
+      "utilization": 0.0001845046500000535
+    },
+    {
+      "device_id": "gateway",
+      "busy_time_ms": 8.31500956000309,
+      "utilization": 0.00041575047800015454
+    },
+    {
+      "device_id": "mobile",
+      "busy_time_ms": 15.990402999992511,
+      "utilization": 0.0007995201499996255
+    }
+  ],
+  "model_selection_distribution": [
+    {
+      "model_id": "logistic-regression-v1",
+      "model_role": "light",
+      "assigned_requests": 78,
+      "percentage": 100.0
+    },
+    {
+      "model_id": "mlp-v1",
+      "model_role": "heavy",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    },
+    {
+      "model_id": "random-forest-v1",
+      "model_role": "balanced",
+      "assigned_requests": 0,
+      "percentage": 0.0
+    }
+  ],
+  "deadline_miss_causes": [
+    {
+      "cause": "network_delay",
+      "count": 5,
+      "rate": 1.0
+    },
+    {
+      "cause": "queue_delay",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "inference_time",
+      "count": 0,
+      "rate": 0.0
+    },
+    {
+      "cause": "incorrect_static_estimate",
+      "count": 0,
+      "rate": 0.0
+    }
+  ]
+}

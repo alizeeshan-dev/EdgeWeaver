@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "model_id": "mlp-v1",
+  "display_name": "Heavy Model",
+  "computational_role": "heavy",
+  "random_seed": 2027,
+  "estimator_class": "MLPClassifier",
+  "preprocessor_class": "StandardScaler",
+  "hyperparameters": {
+    "hidden_layer_sizes": [
+      128,
+      64
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.0001,
+    "batch_size": 128,
+    "learning_rate_init": 0.001,
+    "max_iter": 300,
+    "early_stopping": true,
+    "validation_fraction": 0.1,
+    "n_iter_no_change": 20
+  },
+  "feature_count": 561,
+  "class_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "train_sample_count": 7352,
+  "test_sample_count": 2947,
+  "accuracy": 0.9457074991516796,
+  "macro_f1": 0.9457678990182412,
+  "model_artifact": "model.joblib",
+  "preprocessor_artifact": "preprocessor.joblib",
+  "model_size_bytes": 1858312,
+  "preprocessor_size_bytes": 12946,
+  "dataset_name": "UCI Human Activity Recognition Using Smartphones",
+  "dataset_split": "official predefined train/test split",
+  "sklearn_version": "1.9.0",
+  "trained_at_utc": "2026-09-02T19:35:02.335355Z",
+  "training_iterations": 40,
+  "final_training_loss": 0.0004079961316691029
+}

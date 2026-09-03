@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "model_id": "random-forest-v1",
+  "display_name": "Balanced Model",
+  "computational_role": "balanced",
+  "random_seed": 2027,
+  "estimator_class": "RandomForestClassifier",
+  "preprocessor_class": "FunctionTransformer",
+  "hyperparameters": {
+    "n_estimators": 200,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "n_jobs": 1
+  },
+  "feature_count": 561,
+  "class_labels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "train_sample_count": 7352,
+  "test_sample_count": 2947,
+  "accuracy": 0.9284017645062775,
+  "macro_f1": 0.9264036007617844,
+  "model_artifact": "model.joblib",
+  "preprocessor_artifact": "preprocessor.joblib",
+  "model_size_bytes": 2568840,
+  "preprocessor_size_bytes": 205,
+  "dataset_name": "UCI Human Activity Recognition Using Smartphones",
+  "dataset_split": "official predefined train/test split",
+  "sklearn_version": "1.9.0",
+  "trained_at_utc": "2026-09-02T19:35:02.335355Z",
+  "training_iterations": null,
+  "final_training_loss": null
+}

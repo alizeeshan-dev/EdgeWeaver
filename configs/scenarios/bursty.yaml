@@ -1,0 +1,26 @@
+scenario_id: bursty
+description: Low background arrivals with three short elevated-rate intervals.
+simulation_duration_ms: 20000.0
+random_seed: 42
+arrival:
+  base_rate_per_second: 1.5
+  bursts:
+    - start_time_ms: 3000.0
+      end_time_ms: 4500.0
+      arrival_rate_per_second: 16.0
+    - start_time_ms: 9000.0
+      end_time_ms: 10500.0
+      arrival_rate_per_second: 16.0
+    - start_time_ms: 15000.0
+      end_time_ms: 16500.0
+      arrival_rate_per_second: 16.0
+deadline_distribution:
+  values_ms: [80.0, 140.0, 240.0]
+  weights: [0.30, 0.45, 0.25]
+minimum_accuracy_distribution:
+  values: [0.90, 0.93, 0.95]
+  weights: [0.45, 0.35, 0.20]
+request_input:
+  source_device_id: mobile
+  size_mode: dataset_row
+

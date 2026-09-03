@@ -1,0 +1,28 @@
+format_version: edgeweaver-experiment-v1
+experiment_id: edgeweaver-core-study-v1
+code_version: phase7-v1
+schedulers:
+  - round_robin
+  - fastest_device
+  - min_completion
+  - edgeweaver
+scenarios:
+  - normal
+  - bursty
+  - network_slowdown
+  - device_slowdown
+seeds: [1, 2, 3, 4, 5]
+ablations:
+  - scheduler_name: edgeweaver_no_model_switching
+    scenario_id: bursty
+  - scheduler_name: edgeweaver_no_online_update
+    scenario_id: device_slowdown
+paths:
+  devices_config: configs/devices.yaml
+  network_config: configs/network.yaml
+  simulation_config: configs/simulation.yaml
+  scenario_config_directory: configs/scenarios
+  profiles_root: artifacts/profiles
+  models_root: artifacts/models
+  dataset_root: data/raw/UCI HAR Dataset
+  output_root: experiments/phase7

@@ -1,0 +1,278 @@
+{
+  "format_version": "edgeweaver-failure-cases-v1",
+  "cases": [
+    {
+      "case_id": "fastest_device_burst_queue",
+      "title": "Fastest Device develops material queueing during a burst",
+      "observed": false,
+      "evidence": null,
+      "note": "No Fastest Device burst queue wait reached 5% of its request deadline."
+    },
+    {
+      "case_id": "network_slowdown_remote_miss",
+      "title": "Remote execution misses a deadline with network delay as the primary cause",
+      "observed": true,
+      "evidence": {
+        "run_id": "core-network_slowdown-fastest_device-seed-1",
+        "scenario_id": "network_slowdown",
+        "scheduler_name": "fastest_device",
+        "seed": 1,
+        "request_id": "request-00028",
+        "request_deadline_ms": 180.0,
+        "absolute_deadline_ms": 7592.328884239358,
+        "minimum_accuracy": 0.93,
+        "selected_device_id": "edge-server",
+        "selected_model_id": "logistic-regression-v1",
+        "predicted_completion_ms": 7637.042887959358,
+        "actual_completion_ms": 7637.042887959358,
+        "deadline_met": false,
+        "decision_reason": "selected device with lowest isolated inference time",
+        "actual_queue_wait_ms": 0.0,
+        "actual_network_time_ms": 224.5664,
+        "actual_inference_time_ms": 0.14760372,
+        "candidates": [
+          {
+            "device_id": "mobile",
+            "model_id": "logistic-regression-v1",
+            "model_accuracy": 0.9548693586698337,
+            "compatible": true,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": true,
+            "rejection_reason": null,
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 0.0,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.6150155,
+            "predicted_return_time_ms": 0.0,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7412.943899739357,
+            "predicted_energy_units": 0.6150155,
+            "expected_to_meet_deadline": true
+          },
+          {
+            "device_id": "mobile",
+            "model_id": "random-forest-v1",
+            "model_accuracy": 0.9284017645062775,
+            "compatible": true,
+            "accuracy_eligible": false,
+            "network_available": true,
+            "eligible": false,
+            "rejection_reason": "model_accuracy_below_request_minimum",
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 0.0,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 31.650612500000005,
+            "predicted_return_time_ms": 0.0,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7443.979496739357,
+            "predicted_energy_units": 31.650612500000005,
+            "expected_to_meet_deadline": false
+          },
+          {
+            "device_id": "mobile",
+            "model_id": "mlp-v1",
+            "model_accuracy": 0.9457074991516796,
+            "compatible": false,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": false,
+            "rejection_reason": "incompatible_device_model",
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 0.0,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.8406910000000001,
+            "predicted_return_time_ms": 0.0,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7413.169575239358,
+            "predicted_energy_units": 0.8406910000000001,
+            "expected_to_meet_deadline": false
+          },
+          {
+            "device_id": "gateway",
+            "model_id": "logistic-regression-v1",
+            "model_accuracy": 0.9548693586698337,
+            "compatible": true,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": true,
+            "rejection_reason": null,
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 13.7952,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.31980806,
+            "predicted_return_time_ms": 12.0256,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7438.469492299357,
+            "predicted_energy_units": 0.72852237,
+            "expected_to_meet_deadline": true
+          },
+          {
+            "device_id": "gateway",
+            "model_id": "random-forest-v1",
+            "model_accuracy": 0.9284017645062775,
+            "compatible": true,
+            "accuracy_eligible": false,
+            "network_available": true,
+            "eligible": false,
+            "rejection_reason": "model_accuracy_below_request_minimum",
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 13.7952,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 16.458318500000004,
+            "predicted_return_time_ms": 12.0256,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7454.608002739357,
+            "predicted_energy_units": 33.00554325000001,
+            "expected_to_meet_deadline": false
+          },
+          {
+            "device_id": "gateway",
+            "model_id": "mlp-v1",
+            "model_accuracy": 0.9457074991516796,
+            "compatible": true,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": true,
+            "rejection_reason": null,
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 13.7952,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.4371593200000001,
+            "predicted_return_time_ms": 12.0256,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7438.5868435593575,
+            "predicted_energy_units": 0.9632248900000001,
+            "expected_to_meet_deadline": true
+          },
+          {
+            "device_id": "edge-server",
+            "model_id": "logistic-regression-v1",
+            "model_accuracy": 0.9548693586698337,
+            "compatible": true,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": true,
+            "rejection_reason": null,
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 119.3616,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.14760372,
+            "predicted_return_time_ms": 105.2048,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7637.042887959358,
+            "predicted_energy_units": 0.6793211299999999,
+            "expected_to_meet_deadline": false
+          },
+          {
+            "device_id": "edge-server",
+            "model_id": "random-forest-v1",
+            "model_accuracy": 0.9284017645062775,
+            "compatible": true,
+            "accuracy_eligible": false,
+            "network_available": true,
+            "eligible": false,
+            "rejection_reason": "model_accuracy_below_request_minimum",
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 119.3616,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 7.596147,
+            "predicted_return_time_ms": 105.2048,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7644.4914312393585,
+            "predicted_energy_units": 30.47349425,
+            "expected_to_meet_deadline": false
+          },
+          {
+            "device_id": "edge-server",
+            "model_id": "mlp-v1",
+            "model_accuracy": 0.9457074991516796,
+            "compatible": true,
+            "accuracy_eligible": true,
+            "network_available": true,
+            "eligible": true,
+            "rejection_reason": null,
+            "queue_admissible": true,
+            "predicted_upload_time_ms": 119.3616,
+            "predicted_queue_wait_ms": 0.0,
+            "predicted_inference_time_ms": 0.20176584,
+            "predicted_return_time_ms": 105.2048,
+            "scheduler_overhead_ms": 0.0,
+            "predicted_completion_ms": 7637.097050079358,
+            "predicted_energy_units": 0.89596961,
+            "expected_to_meet_deadline": false
+          }
+        ],
+        "event_references": [
+          {
+            "sequence": 149,
+            "timestamp_ms": 7000.0,
+            "event_type": "NETWORK_SLOWDOWN_STARTED"
+          },
+          {
+            "sequence": 159,
+            "timestamp_ms": 7412.328884239358,
+            "event_type": "REQUEST_ARRIVED"
+          },
+          {
+            "sequence": 160,
+            "timestamp_ms": 7412.328884239358,
+            "event_type": "SCHEDULER_DECISION"
+          },
+          {
+            "sequence": 164,
+            "timestamp_ms": 7531.690484239358,
+            "event_type": "REQUEST_QUEUED"
+          },
+          {
+            "sequence": 165,
+            "timestamp_ms": 7531.690484239358,
+            "event_type": "INFERENCE_STARTED"
+          },
+          {
+            "sequence": 166,
+            "timestamp_ms": 7531.838087959358,
+            "event_type": "INFERENCE_COMPLETED"
+          },
+          {
+            "sequence": 168,
+            "timestamp_ms": 7637.042887959358,
+            "event_type": "REQUEST_RETURNED"
+          },
+          {
+            "sequence": 169,
+            "timestamp_ms": 7637.042887959358,
+            "event_type": "DEADLINE_MISSED"
+          },
+          {
+            "sequence": 277,
+            "timestamp_ms": 14000.0,
+            "event_type": "NETWORK_SLOWDOWN_ENDED"
+          }
+        ]
+      },
+      "note": "Observed in saved structured run output."
+    },
+    {
+      "case_id": "device_slowdown_stale_estimate",
+      "title": "A stale execution estimate contributes to a device-slowdown miss",
+      "observed": false,
+      "evidence": null,
+      "note": "No device-slowdown miss classified as incorrect static estimate was observed."
+    },
+    {
+      "case_id": "edgeweaver_smaller_model_for_deadline",
+      "title": "EdgeWeaver selects a lower-compute model while a slower model is infeasible",
+      "observed": false,
+      "evidence": null,
+      "note": "No qualifying EdgeWeaver model-switching case was observed."
+    },
+    {
+      "case_id": "no_assignment_meets_deadline",
+      "title": "No valid assignment is predicted to meet the deadline",
+      "observed": false,
+      "evidence": null,
+      "note": "No request with valid candidates but no deadline-feasible assignment was observed."
+    }
+  ]
+}

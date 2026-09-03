@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "core-network_slowdown-fastest_device-seed-5",
+  "kind": "core",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "fastest_device",
+  "seed": 5,
+  "identity_sha256": "8848ff13a9f9075d19d32b14cafabb273bb14787e69ce5506f1c5d00fc67db9e",
+  "trace_id": "network_slowdown-seed-5",
+  "trace_reference": "experiments/phase7/traces/network_slowdown-seed-5-cef111cd10f8.json",
+  "trace_sha256": "0ee23961a438763e5bdfad55850f6dfae55abc075b790cde0f0c6c8dc4643019",
+  "scenario_config_sha256": "cef111cd10f8923437648942de9a7fc8a7f28855acda39983310926223e1fed1",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/network_slowdown.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 80,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:48.226458Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/core-network_slowdown-fastest_device-seed-5.json",
+    "event_log": "experiments/phase7/raw/events/core-network_slowdown-fastest_device-seed-5.json",
+    "summary_json": "experiments/phase7/results/per_run/core-network_slowdown-fastest_device-seed-5.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/core-network_slowdown-fastest_device-seed-5.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "945465fddc0d143a57ae81369098a875db74f31823875c587fdf6b626874c0f1",
+    "event_log": "8f270ea2ccf60215a4a15faca68ef41a2ee35d053a79897711cb222f592e704e",
+    "summary_json": "5bd0db2b3798f00f2299cbb8d05fd586e819764092b5571097cf4a8e8a3e13bf",
+    "summary_csv": "545ee551413c1510f5c60dc435a03d37aafb00b7bc2a0660e7fd571fab3c2743"
+  }
+}

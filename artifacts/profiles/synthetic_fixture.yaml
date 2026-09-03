@@ -1,0 +1,15 @@
+# SYNTHETIC TEST FIXTURE ONLY.
+# These values are convenient deterministic inputs, not measured model results.
+profiles:
+  - model_id: light
+    display_name: Synthetic Light Fixture
+    accuracy: 0.75
+    macro_f1: null
+    model_size_bytes: null
+    local_latency_ms_mean: 0.8
+    local_latency_ms_median: null
+    local_latency_ms_std: null
+    local_latency_ms_p95: null
+    profile_kind: synthetic_fixture
+    computational_role: light
+    notes: Synthetic Phase 1 test data; never use as experimental evidence.

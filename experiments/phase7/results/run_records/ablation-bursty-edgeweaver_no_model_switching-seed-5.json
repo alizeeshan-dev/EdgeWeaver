@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "ablation-bursty-edgeweaver_no_model_switching-seed-5",
+  "kind": "ablation",
+  "scenario_id": "bursty",
+  "scheduler_name": "edgeweaver_no_model_switching",
+  "seed": 5,
+  "identity_sha256": "2d05d82a9a9868c5307d47cc11b746bc5f5e36123650b98104f8b4bb0a4114ab",
+  "trace_id": "bursty-seed-5",
+  "trace_reference": "experiments/phase7/traces/bursty-seed-5-1bb862a19f6b.json",
+  "trace_sha256": "177ac64d3c57f4677418197056fbcb96f8109964f61f126235b617eef05df15d",
+  "scenario_config_sha256": "1bb862a19f6b7221ec4c54ebfcfdbcd5b463316c2d23d029843af8d12aff1d32",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/bursty.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 95,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:51.075364Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/ablation-bursty-edgeweaver_no_model_switching-seed-5.json",
+    "event_log": "experiments/phase7/raw/events/ablation-bursty-edgeweaver_no_model_switching-seed-5.json",
+    "summary_json": "experiments/phase7/results/per_run/ablation-bursty-edgeweaver_no_model_switching-seed-5.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/ablation-bursty-edgeweaver_no_model_switching-seed-5.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "84b81fea07d486734d8cffa1f2e16d37bb423aa5671d9dda2af8a42bf75b2be6",
+    "event_log": "975e8abd073a5f7ced3819f0b58d30b9e89f6fc7b2bf23f726541b7a4e49b05d",
+    "summary_json": "27f1e60aa8a40543b95d78fc6279b4f2326c0fe6980f583e0350db1a0e05bdd7",
+    "summary_csv": "829cb2fe103810c1ceb424d9b31d0247270449a042d96e085a7f9acba5f27cb6"
+  }
+}

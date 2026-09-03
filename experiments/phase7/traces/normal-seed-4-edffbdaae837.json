@@ -1,0 +1,676 @@
+{
+  "format_version": "edgeweaver-workload-trace-v1",
+  "trace_id": "normal-seed-4",
+  "dataset_name": "UCI Human Activity Recognition Using Smartphones",
+  "dataset_split": "test",
+  "seed": 4,
+  "generation": {
+    "scenario_id": "normal",
+    "generation_config_version": "edgeweaver-scenario-generator-v1",
+    "scenario_config_sha256": "b5d8892f5cb537a55fbbdbf41011dbd0ecaad8e2465a8400b9c34328bd0f932d",
+    "simulation_duration_ms": 20000.0,
+    "request_count": 66
+  },
+  "requests": [
+    {
+      "request_id": "request-00001",
+      "arrival_time_ms": 949.7066656372544,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 379
+    },
+    {
+      "request_id": "request-00002",
+      "arrival_time_ms": 1057.4063547402452,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 2704
+    },
+    {
+      "request_id": "request-00003",
+      "arrival_time_ms": 1867.456155360312,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 866
+    },
+    {
+      "request_id": "request-00004",
+      "arrival_time_ms": 1902.7540873567657,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 688
+    },
+    {
+      "request_id": "request-00005",
+      "arrival_time_ms": 2137.8165254188984,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 2886
+    },
+    {
+      "request_id": "request-00006",
+      "arrival_time_ms": 2336.585116195889,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 231
+    },
+    {
+      "request_id": "request-00007",
+      "arrival_time_ms": 2490.1833007356386,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 111
+    },
+    {
+      "request_id": "request-00008",
+      "arrival_time_ms": 2869.655530438151,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 2321
+    },
+    {
+      "request_id": "request-00009",
+      "arrival_time_ms": 3043.776917998299,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 725
+    },
+    {
+      "request_id": "request-00010",
+      "arrival_time_ms": 3415.3722042672443,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 1832
+    },
+    {
+      "request_id": "request-00011",
+      "arrival_time_ms": 3646.4944170235103,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 992
+    },
+    {
+      "request_id": "request-00012",
+      "arrival_time_ms": 3880.7341740334787,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 699
+    },
+    {
+      "request_id": "request-00013",
+      "arrival_time_ms": 3892.017320850927,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 1194
+    },
+    {
+      "request_id": "request-00014",
+      "arrival_time_ms": 4265.475536073104,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 1490
+    },
+    {
+      "request_id": "request-00015",
+      "arrival_time_ms": 5430.526436200213,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 446
+    },
+    {
+      "request_id": "request-00016",
+      "arrival_time_ms": 5652.8517606664955,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 210
+    },
+    {
+      "request_id": "request-00017",
+      "arrival_time_ms": 5946.055491506972,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 2916
+    },
+    {
+      "request_id": "request-00018",
+      "arrival_time_ms": 6005.091915439257,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 2063
+    },
+    {
+      "request_id": "request-00019",
+      "arrival_time_ms": 6106.3570511520575,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 1016
+    },
+    {
+      "request_id": "request-00020",
+      "arrival_time_ms": 6788.9159413300895,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1552
+    },
+    {
+      "request_id": "request-00021",
+      "arrival_time_ms": 7751.530591631399,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 2847
+    },
+    {
+      "request_id": "request-00022",
+      "arrival_time_ms": 7925.610562825099,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 2076
+    },
+    {
+      "request_id": "request-00023",
+      "arrival_time_ms": 7951.893724242316,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1723
+    },
+    {
+      "request_id": "request-00024",
+      "arrival_time_ms": 8331.628545924968,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 259
+    },
+    {
+      "request_id": "request-00025",
+      "arrival_time_ms": 8955.352807222687,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 142
+    },
+    {
+      "request_id": "request-00026",
+      "arrival_time_ms": 9056.643323682394,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1900
+    },
+    {
+      "request_id": "request-00027",
+      "arrival_time_ms": 9232.294582501707,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1892
+    },
+    {
+      "request_id": "request-00028",
+      "arrival_time_ms": 9250.900011363325,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1091
+    },
+    {
+      "request_id": "request-00029",
+      "arrival_time_ms": 9302.245150318893,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 1636
+    },
+    {
+      "request_id": "request-00030",
+      "arrival_time_ms": 9412.21107629609,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 1471
+    },
+    {
+      "request_id": "request-00031",
+      "arrival_time_ms": 9476.522872890155,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 2484
+    },
+    {
+      "request_id": "request-00032",
+      "arrival_time_ms": 11106.116282740502,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 988
+    },
+    {
+      "request_id": "request-00033",
+      "arrival_time_ms": 11125.569554563928,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 1606
+    },
+    {
+      "request_id": "request-00034",
+      "arrival_time_ms": 11413.903346128911,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 1868
+    },
+    {
+      "request_id": "request-00035",
+      "arrival_time_ms": 11440.047335902405,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 2147
+    },
+    {
+      "request_id": "request-00036",
+      "arrival_time_ms": 11713.876188032762,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 1674
+    },
+    {
+      "request_id": "request-00037",
+      "arrival_time_ms": 12174.85056994105,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1726
+    },
+    {
+      "request_id": "request-00038",
+      "arrival_time_ms": 12646.625764557108,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 1818
+    },
+    {
+      "request_id": "request-00039",
+      "arrival_time_ms": 13199.586656102145,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 130
+    },
+    {
+      "request_id": "request-00040",
+      "arrival_time_ms": 13336.491290465356,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 186
+    },
+    {
+      "request_id": "request-00041",
+      "arrival_time_ms": 13352.741533557657,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 920
+    },
+    {
+      "request_id": "request-00042",
+      "arrival_time_ms": 13386.14614827803,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 663
+    },
+    {
+      "request_id": "request-00043",
+      "arrival_time_ms": 13723.948347153635,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 2788
+    },
+    {
+      "request_id": "request-00044",
+      "arrival_time_ms": 13826.91536521942,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 211
+    },
+    {
+      "request_id": "request-00045",
+      "arrival_time_ms": 14044.009464250166,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 1701
+    },
+    {
+      "request_id": "request-00046",
+      "arrival_time_ms": 14366.485680763415,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 1129
+    },
+    {
+      "request_id": "request-00047",
+      "arrival_time_ms": 14732.965818435941,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 2,
+      "feature_vector_id": 2548
+    },
+    {
+      "request_id": "request-00048",
+      "arrival_time_ms": 14885.53151339032,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1417
+    },
+    {
+      "request_id": "request-00049",
+      "arrival_time_ms": 15112.826767939925,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 395
+    },
+    {
+      "request_id": "request-00050",
+      "arrival_time_ms": 15120.86543188454,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 331
+    },
+    {
+      "request_id": "request-00051",
+      "arrival_time_ms": 15996.00999262829,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 2300
+    },
+    {
+      "request_id": "request-00052",
+      "arrival_time_ms": 16047.929969704615,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 1967
+    },
+    {
+      "request_id": "request-00053",
+      "arrival_time_ms": 16211.789983576324,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 2249
+    },
+    {
+      "request_id": "request-00054",
+      "arrival_time_ms": 16380.746905075448,
+      "deadline_ms": 100.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 1436
+    },
+    {
+      "request_id": "request-00055",
+      "arrival_time_ms": 16556.210500131056,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 1578
+    },
+    {
+      "request_id": "request-00056",
+      "arrival_time_ms": 16708.187588190318,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 1,
+      "feature_vector_id": 1474
+    },
+    {
+      "request_id": "request-00057",
+      "arrival_time_ms": 17294.665176920033,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 1721
+    },
+    {
+      "request_id": "request-00058",
+      "arrival_time_ms": 17432.57354821,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 6,
+      "feature_vector_id": 1760
+    },
+    {
+      "request_id": "request-00059",
+      "arrival_time_ms": 17768.486957221863,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 12
+    },
+    {
+      "request_id": "request-00060",
+      "arrival_time_ms": 18046.737679342747,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 2755
+    },
+    {
+      "request_id": "request-00061",
+      "arrival_time_ms": 18380.303313734003,
+      "deadline_ms": 300.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 1644
+    },
+    {
+      "request_id": "request-00062",
+      "arrival_time_ms": 18403.390738235845,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.93,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 1735
+    },
+    {
+      "request_id": "request-00063",
+      "arrival_time_ms": 18651.127335292666,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 4,
+      "feature_vector_id": 2259
+    },
+    {
+      "request_id": "request-00064",
+      "arrival_time_ms": 19261.234895306377,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.95,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 275
+    },
+    {
+      "request_id": "request-00065",
+      "arrival_time_ms": 19289.627787809102,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 5,
+      "feature_vector_id": 1853
+    },
+    {
+      "request_id": "request-00066",
+      "arrival_time_ms": 19318.113248624755,
+      "deadline_ms": 180.0,
+      "minimum_accuracy": 0.9,
+      "input_size_bytes": 4488,
+      "source_device_id": "mobile",
+      "true_label": 3,
+      "feature_vector_id": 431
+    }
+  ]
+}

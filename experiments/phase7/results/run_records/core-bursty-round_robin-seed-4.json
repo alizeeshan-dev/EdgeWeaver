@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "core-bursty-round_robin-seed-4",
+  "kind": "core",
+  "scenario_id": "bursty",
+  "scheduler_name": "round_robin",
+  "seed": 4,
+  "identity_sha256": "8e95e579db3218bed2188802e58c03fbac5d01b2bf39bc332e76ac5722ca471a",
+  "trace_id": "bursty-seed-4",
+  "trace_reference": "experiments/phase7/traces/bursty-seed-4-1bb862a19f6b.json",
+  "trace_sha256": "c8e4dec737a205ea5231f02fe03d4e2a304c81531bed3e4fcfc7a9167ab0f171",
+  "scenario_config_sha256": "1bb862a19f6b7221ec4c54ebfcfdbcd5b463316c2d23d029843af8d12aff1d32",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/bursty.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 96,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:46.367992Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/core-bursty-round_robin-seed-4.json",
+    "event_log": "experiments/phase7/raw/events/core-bursty-round_robin-seed-4.json",
+    "summary_json": "experiments/phase7/results/per_run/core-bursty-round_robin-seed-4.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/core-bursty-round_robin-seed-4.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "273d8c6195c9fac8254de87dd75ea6bca288a05cb0092641d73fc50c7b58f191",
+    "event_log": "b5d39e45ca886628b1040bd0dc9bfaf53e1b2b9737615e5de2d0d51059f60ef6",
+    "summary_json": "24b23647818f71303740af08a6b7aef6435a6deb86eafbb2139e7fe49e0f2b78",
+    "summary_csv": "e0d1c1eb06f832aa9efd3373d2606160fd71048afee1f099a63650becb95f12b"
+  }
+}

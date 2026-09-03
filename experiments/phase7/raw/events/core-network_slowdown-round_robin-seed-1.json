@@ -1,0 +1,6085 @@
+{
+  "format_version": "edgeweaver-event-log-v1",
+  "run_id": "core-network_slowdown-round_robin-seed-1",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "round_robin",
+  "seed": 1,
+  "events": [
+    {
+      "sequence": 0,
+      "timestamp_ms": 268.2572565931347,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1696
+      }
+    },
+    {
+      "sequence": 1,
+      "timestamp_ms": 268.2572565931347,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00001",
+        "predicted_completion_ms": 268.8722720931347,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 2,
+      "timestamp_ms": 268.2572565931347,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 3,
+      "timestamp_ms": 268.2572565931347,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 4,
+      "timestamp_ms": 268.8722720931347,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 5,
+      "timestamp_ms": 268.8722720931347,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00001",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 6,
+      "timestamp_ms": 345.37054262445577,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00002",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1737
+      }
+    },
+    {
+      "sequence": 7,
+      "timestamp_ms": 345.37054262445577,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00002",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00002",
+        "predicted_completion_ms": 371.5111506844558,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 8,
+      "timestamp_ms": 359.1657426244558,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00002",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 9,
+      "timestamp_ms": 359.1657426244558,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00002",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 10,
+      "timestamp_ms": 359.4855506844558,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00002",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 11,
+      "timestamp_ms": 371.5111506844558,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00002",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000034,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 12,
+      "timestamp_ms": 1689.2297607764874,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00003",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2625
+      }
+    },
+    {
+      "sequence": 13,
+      "timestamp_ms": 1689.2297607764874,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00003",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00003",
+        "predicted_completion_ms": 1763.0189644964876,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 14,
+      "timestamp_ms": 1727.8201607764875,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00003",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 15,
+      "timestamp_ms": 1727.8201607764875,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00003",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 16,
+      "timestamp_ms": 1727.9677644964875,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00003",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 17,
+      "timestamp_ms": 1763.0189644964876,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00003",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000016,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 18,
+      "timestamp_ms": 1780.8365390014453,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 72
+      }
+    },
+    {
+      "sequence": 19,
+      "timestamp_ms": 1780.8365390014453,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00004",
+        "predicted_completion_ms": 1781.4515545014453,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 20,
+      "timestamp_ms": 1780.8365390014453,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 21,
+      "timestamp_ms": 1780.8365390014453,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 22,
+      "timestamp_ms": 1781.4515545014453,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 23,
+      "timestamp_ms": 1781.4515545014453,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00004",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 24,
+      "timestamp_ms": 1809.6770487781462,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00005",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 1443
+      }
+    },
+    {
+      "sequence": 25,
+      "timestamp_ms": 1809.6770487781462,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00005",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00005",
+        "predicted_completion_ms": 1835.8176568381461,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 26,
+      "timestamp_ms": 1823.4722487781462,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00005",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 27,
+      "timestamp_ms": 1823.4722487781462,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00005",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 28,
+      "timestamp_ms": 1823.7920568381462,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00005",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 29,
+      "timestamp_ms": 1835.8176568381461,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00005",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999977,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 30,
+      "timestamp_ms": 2259.626320192093,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00006",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1984
+      }
+    },
+    {
+      "sequence": 31,
+      "timestamp_ms": 2259.626320192093,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00006",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00006",
+        "predicted_completion_ms": 2333.415523912093,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 32,
+      "timestamp_ms": 2298.216720192093,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00006",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 33,
+      "timestamp_ms": 2298.216720192093,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00006",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 34,
+      "timestamp_ms": 2298.364323912093,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00006",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 35,
+      "timestamp_ms": 2333.415523912093,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00006",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 36,
+      "timestamp_ms": 2384.2860946557053,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1335
+      }
+    },
+    {
+      "sequence": 37,
+      "timestamp_ms": 2384.2860946557053,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00007",
+        "predicted_completion_ms": 2384.9011101557053,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 38,
+      "timestamp_ms": 2384.2860946557053,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 39,
+      "timestamp_ms": 2384.2860946557053,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 40,
+      "timestamp_ms": 2384.9011101557053,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 41,
+      "timestamp_ms": 2384.9011101557053,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00007",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 42,
+      "timestamp_ms": 2522.141438861632,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00008",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 2708
+      }
+    },
+    {
+      "sequence": 43,
+      "timestamp_ms": 2522.141438861632,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00008",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00008",
+        "predicted_completion_ms": 2548.282046921632,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 44,
+      "timestamp_ms": 2529.5697993522012,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00009",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2801
+      }
+    },
+    {
+      "sequence": 45,
+      "timestamp_ms": 2529.5697993522012,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00009",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00009",
+        "predicted_completion_ms": 2603.359003072201,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 46,
+      "timestamp_ms": 2535.936638861632,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00008",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 47,
+      "timestamp_ms": 2535.936638861632,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00008",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 48,
+      "timestamp_ms": 2536.2564469216322,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00008",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 49,
+      "timestamp_ms": 2548.282046921632,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00008",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999977,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 50,
+      "timestamp_ms": 2568.1601993522013,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00009",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 51,
+      "timestamp_ms": 2568.1601993522013,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00009",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 52,
+      "timestamp_ms": 2568.3078030722013,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00009",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 53,
+      "timestamp_ms": 2603.359003072201,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00009",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 54,
+      "timestamp_ms": 2720.5864318326135,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 2436
+      }
+    },
+    {
+      "sequence": 55,
+      "timestamp_ms": 2720.5864318326135,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00010",
+        "predicted_completion_ms": 2721.2014473326135,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 56,
+      "timestamp_ms": 2720.5864318326135,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 57,
+      "timestamp_ms": 2720.5864318326135,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 58,
+      "timestamp_ms": 2721.2014473326135,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 59,
+      "timestamp_ms": 2721.2014473326135,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00010",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 60,
+      "timestamp_ms": 2980.95103541949,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00011",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1368
+      }
+    },
+    {
+      "sequence": 61,
+      "timestamp_ms": 2980.95103541949,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00011",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00011",
+        "predicted_completion_ms": 3007.09164347949,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 62,
+      "timestamp_ms": 2994.74623541949,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00011",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 63,
+      "timestamp_ms": 2994.74623541949,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00011",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 64,
+      "timestamp_ms": 2995.06604347949,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00011",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 65,
+      "timestamp_ms": 3007.09164347949,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00011",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999977,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 66,
+      "timestamp_ms": 3038.601533256798,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00012",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 2609
+      }
+    },
+    {
+      "sequence": 67,
+      "timestamp_ms": 3038.601533256798,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00012",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00012",
+        "predicted_completion_ms": 3112.390736976798,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 68,
+      "timestamp_ms": 3077.191933256798,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00012",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 69,
+      "timestamp_ms": 3077.191933256798,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00012",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 70,
+      "timestamp_ms": 3077.339536976798,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00012",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 71,
+      "timestamp_ms": 3112.390736976798,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00012",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 72,
+      "timestamp_ms": 3457.9051983857935,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 215
+      }
+    },
+    {
+      "sequence": 73,
+      "timestamp_ms": 3457.9051983857935,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00013",
+        "predicted_completion_ms": 3458.5202138857935,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 74,
+      "timestamp_ms": 3457.9051983857935,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 75,
+      "timestamp_ms": 3457.9051983857935,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 76,
+      "timestamp_ms": 3458.5202138857935,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 77,
+      "timestamp_ms": 3458.5202138857935,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00013",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 78,
+      "timestamp_ms": 3510.0593428091815,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00014",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1946
+      }
+    },
+    {
+      "sequence": 79,
+      "timestamp_ms": 3510.0593428091815,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00014",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00014",
+        "predicted_completion_ms": 3536.1999508691815,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 80,
+      "timestamp_ms": 3523.8545428091816,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00014",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 81,
+      "timestamp_ms": 3523.8545428091816,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00014",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 82,
+      "timestamp_ms": 3524.1743508691816,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00014",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 83,
+      "timestamp_ms": 3536.1999508691815,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00014",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999977,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 84,
+      "timestamp_ms": 3706.6232225683066,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00015",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 790
+      }
+    },
+    {
+      "sequence": 85,
+      "timestamp_ms": 3706.6232225683066,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00015",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00015",
+        "predicted_completion_ms": 3780.4124262883065,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 86,
+      "timestamp_ms": 3738.813427031381,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 723
+      }
+    },
+    {
+      "sequence": 87,
+      "timestamp_ms": 3738.813427031381,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00016",
+        "predicted_completion_ms": 3739.428442531381,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 88,
+      "timestamp_ms": 3738.813427031381,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 89,
+      "timestamp_ms": 3738.813427031381,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 90,
+      "timestamp_ms": 3739.428442531381,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 91,
+      "timestamp_ms": 3739.428442531381,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00016",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150155000000268,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 92,
+      "timestamp_ms": 3745.2136225683066,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00015",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 93,
+      "timestamp_ms": 3745.2136225683066,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00015",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 94,
+      "timestamp_ms": 3745.3612262883066,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00015",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 2,
+        "prediction_correct": false
+      }
+    },
+    {
+      "sequence": 95,
+      "timestamp_ms": 3780.4124262883065,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00015",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 96,
+      "timestamp_ms": 3969.5393644632222,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00017",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2002
+      }
+    },
+    {
+      "sequence": 97,
+      "timestamp_ms": 3969.5393644632222,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00017",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00017",
+        "predicted_completion_ms": 3995.679972523222,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 98,
+      "timestamp_ms": 3983.3345644632223,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00017",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 99,
+      "timestamp_ms": 3983.3345644632223,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00017",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 100,
+      "timestamp_ms": 3983.6543725232223,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00017",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 101,
+      "timestamp_ms": 3995.679972523222,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00017",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999977,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 102,
+      "timestamp_ms": 4085.1303651641283,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00018",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2264
+      }
+    },
+    {
+      "sequence": 103,
+      "timestamp_ms": 4085.1303651641283,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00018",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00018",
+        "predicted_completion_ms": 4158.919568884128,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 104,
+      "timestamp_ms": 4123.720765164128,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00018",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 105,
+      "timestamp_ms": 4123.720765164128,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00018",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 106,
+      "timestamp_ms": 4123.868368884128,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00018",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 107,
+      "timestamp_ms": 4158.919568884128,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00018",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 108,
+      "timestamp_ms": 4257.315401142582,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2618
+      }
+    },
+    {
+      "sequence": 109,
+      "timestamp_ms": 4257.315401142582,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00019",
+        "predicted_completion_ms": 4257.930416642582,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 110,
+      "timestamp_ms": 4257.315401142582,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 111,
+      "timestamp_ms": 4257.315401142582,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 112,
+      "timestamp_ms": 4257.930416642582,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 113,
+      "timestamp_ms": 4257.930416642582,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00019",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 114,
+      "timestamp_ms": 4919.571482749386,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00020",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 623
+      }
+    },
+    {
+      "sequence": 115,
+      "timestamp_ms": 4919.571482749386,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00020",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00020",
+        "predicted_completion_ms": 4945.712090809385,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 116,
+      "timestamp_ms": 4933.366682749385,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00020",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 117,
+      "timestamp_ms": 4933.366682749385,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00020",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 118,
+      "timestamp_ms": 4933.686490809385,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00020",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 119,
+      "timestamp_ms": 4945.712090809385,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00020",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999067,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 120,
+      "timestamp_ms": 5198.20007040933,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00021",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2568
+      }
+    },
+    {
+      "sequence": 121,
+      "timestamp_ms": 5198.20007040933,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00021",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00021",
+        "predicted_completion_ms": 5271.98927412933,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 122,
+      "timestamp_ms": 5236.79047040933,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00021",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 123,
+      "timestamp_ms": 5236.79047040933,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00021",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 124,
+      "timestamp_ms": 5236.93807412933,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00021",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 125,
+      "timestamp_ms": 5271.98927412933,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00021",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 126,
+      "timestamp_ms": 5422.896076073021,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2449
+      }
+    },
+    {
+      "sequence": 127,
+      "timestamp_ms": 5422.896076073021,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00022",
+        "predicted_completion_ms": 5423.51109157302,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 128,
+      "timestamp_ms": 5422.896076073021,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 129,
+      "timestamp_ms": 5422.896076073021,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 130,
+      "timestamp_ms": 5423.51109157302,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 131,
+      "timestamp_ms": 5423.51109157302,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00022",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 132,
+      "timestamp_ms": 6132.887965549918,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00023",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 926
+      }
+    },
+    {
+      "sequence": 133,
+      "timestamp_ms": 6132.887965549918,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00023",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00023",
+        "predicted_completion_ms": 6159.028573609917,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 134,
+      "timestamp_ms": 6146.683165549917,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00023",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 135,
+      "timestamp_ms": 6146.683165549917,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00023",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 136,
+      "timestamp_ms": 6147.002973609917,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00023",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 137,
+      "timestamp_ms": 6159.028573609917,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00023",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999067,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 138,
+      "timestamp_ms": 6640.6012629872575,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00024",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 184
+      }
+    },
+    {
+      "sequence": 139,
+      "timestamp_ms": 6640.6012629872575,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00024",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00024",
+        "predicted_completion_ms": 6714.3904667072575,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 140,
+      "timestamp_ms": 6679.191662987258,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00024",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 141,
+      "timestamp_ms": 6679.191662987258,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00024",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 142,
+      "timestamp_ms": 6679.339266707258,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00024",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 143,
+      "timestamp_ms": 6714.3904667072575,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00024",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999993,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 144,
+      "timestamp_ms": 6932.06076315234,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2274
+      }
+    },
+    {
+      "sequence": 145,
+      "timestamp_ms": 6932.06076315234,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00025",
+        "predicted_completion_ms": 6932.675778652339,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 146,
+      "timestamp_ms": 6932.06076315234,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 147,
+      "timestamp_ms": 6932.06076315234,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 148,
+      "timestamp_ms": 6932.675778652339,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 149,
+      "timestamp_ms": 6932.675778652339,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00025",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 150,
+      "timestamp_ms": 7000.0,
+      "event_type": "NETWORK_SLOWDOWN_STARTED",
+      "request_id": null,
+      "device_id": null,
+      "model_id": null,
+      "details": {
+        "link_id": "mobile-to-edge-server",
+        "original_base_latency_ms": 35.0,
+        "temporary_base_latency_ms": 105.0,
+        "original_bandwidth_mbps": 10.0,
+        "temporary_bandwidth_mbps": 2.5,
+        "start_time_ms": 7000.0,
+        "end_time_ms": 14000.0
+      }
+    },
+    {
+      "sequence": 151,
+      "timestamp_ms": 7014.213076315744,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00026",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 2432
+      }
+    },
+    {
+      "sequence": 152,
+      "timestamp_ms": 7014.213076315744,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00026",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00026",
+        "predicted_completion_ms": 7040.353684375743,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 153,
+      "timestamp_ms": 7028.008276315743,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00026",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 154,
+      "timestamp_ms": 7028.008276315743,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00026",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 155,
+      "timestamp_ms": 7028.328084375743,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00026",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 156,
+      "timestamp_ms": 7040.353684375743,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00026",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608059999067,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 157,
+      "timestamp_ms": 7372.890139332081,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00027",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1357
+      }
+    },
+    {
+      "sequence": 158,
+      "timestamp_ms": 7372.890139332081,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00027",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00027",
+        "predicted_completion_ms": 7597.604143052082,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 159,
+      "timestamp_ms": 7412.328884239358,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 484
+      }
+    },
+    {
+      "sequence": 160,
+      "timestamp_ms": 7412.328884239358,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00028",
+        "predicted_completion_ms": 7412.943899739357,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 161,
+      "timestamp_ms": 7412.328884239358,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 162,
+      "timestamp_ms": 7412.328884239358,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 163,
+      "timestamp_ms": 7412.943899739357,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 164,
+      "timestamp_ms": 7412.943899739357,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00028",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 165,
+      "timestamp_ms": 7492.251739332081,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00027",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 166,
+      "timestamp_ms": 7492.251739332081,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00027",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 167,
+      "timestamp_ms": 7492.399343052081,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00027",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 168,
+      "timestamp_ms": 7597.604143052082,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00027",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.71400372000062,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 169,
+      "timestamp_ms": 9518.061273768155,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00029",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 429
+      }
+    },
+    {
+      "sequence": 170,
+      "timestamp_ms": 9518.061273768155,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00029",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00029",
+        "predicted_completion_ms": 9544.201881828156,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 171,
+      "timestamp_ms": 9531.856473768155,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00029",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 172,
+      "timestamp_ms": 9531.856473768155,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00029",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 173,
+      "timestamp_ms": 9532.176281828155,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00029",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 174,
+      "timestamp_ms": 9544.201881828156,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00029",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 175,
+      "timestamp_ms": 9577.046663484549,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00030",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1105
+      }
+    },
+    {
+      "sequence": 176,
+      "timestamp_ms": 9577.046663484549,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00030",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00030",
+        "predicted_completion_ms": 9801.760667204548,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 177,
+      "timestamp_ms": 9696.408263484549,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00030",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 178,
+      "timestamp_ms": 9696.408263484549,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00030",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 179,
+      "timestamp_ms": 9696.555867204548,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00030",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 180,
+      "timestamp_ms": 9801.760667204548,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00030",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.7140037199988,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 181,
+      "timestamp_ms": 10196.578204701626,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2231
+      }
+    },
+    {
+      "sequence": 182,
+      "timestamp_ms": 10196.578204701626,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00031",
+        "predicted_completion_ms": 10197.193220201625,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 183,
+      "timestamp_ms": 10196.578204701626,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 184,
+      "timestamp_ms": 10196.578204701626,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 185,
+      "timestamp_ms": 10197.193220201625,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 186,
+      "timestamp_ms": 10197.193220201625,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00031",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 187,
+      "timestamp_ms": 10672.141068428971,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00032",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 933
+      }
+    },
+    {
+      "sequence": 188,
+      "timestamp_ms": 10672.141068428971,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00032",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00032",
+        "predicted_completion_ms": 10698.281676488972,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 189,
+      "timestamp_ms": 10685.936268428972,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00032",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 190,
+      "timestamp_ms": 10685.936268428972,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00032",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 191,
+      "timestamp_ms": 10686.256076488971,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00032",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 192,
+      "timestamp_ms": 10698.281676488972,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00032",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 193,
+      "timestamp_ms": 10752.120383278025,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00033",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 92
+      }
+    },
+    {
+      "sequence": 194,
+      "timestamp_ms": 10752.120383278025,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00033",
+        "predicted_completion_ms": 10976.834386998024,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": false,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 195,
+      "timestamp_ms": 10871.481983278025,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 196,
+      "timestamp_ms": 10871.481983278025,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 197,
+      "timestamp_ms": 10871.629586998024,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 198,
+      "timestamp_ms": 10976.834386998024,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.7140037199988,
+        "deadline_met": false,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 199,
+      "timestamp_ms": 10976.834386998024,
+      "event_type": "DEADLINE_MISSED",
+      "request_id": "request-00033",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "absolute_deadline_ms": 10932.120383278025
+      }
+    },
+    {
+      "sequence": 200,
+      "timestamp_ms": 11202.431615912723,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2037
+      }
+    },
+    {
+      "sequence": 201,
+      "timestamp_ms": 11202.431615912723,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00034",
+        "predicted_completion_ms": 11203.046631412722,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 202,
+      "timestamp_ms": 11202.431615912723,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 203,
+      "timestamp_ms": 11202.431615912723,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 204,
+      "timestamp_ms": 11203.046631412722,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 205,
+      "timestamp_ms": 11203.046631412722,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00034",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 206,
+      "timestamp_ms": 11214.385397198103,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00035",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2193
+      }
+    },
+    {
+      "sequence": 207,
+      "timestamp_ms": 11214.385397198103,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00035",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00035",
+        "predicted_completion_ms": 11240.526005258103,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 208,
+      "timestamp_ms": 11228.180597198103,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00035",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 209,
+      "timestamp_ms": 11228.180597198103,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00035",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 210,
+      "timestamp_ms": 11228.500405258103,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00035",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 211,
+      "timestamp_ms": 11240.526005258103,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00035",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 212,
+      "timestamp_ms": 11553.30416335055,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00036",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 526
+      }
+    },
+    {
+      "sequence": 213,
+      "timestamp_ms": 11553.30416335055,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00036",
+        "predicted_completion_ms": 11778.01816707055,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": false,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 214,
+      "timestamp_ms": 11672.665763350551,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 215,
+      "timestamp_ms": 11672.665763350551,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 216,
+      "timestamp_ms": 11672.81336707055,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 217,
+      "timestamp_ms": 11778.01816707055,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.7140037199988,
+        "deadline_met": false,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 218,
+      "timestamp_ms": 11778.01816707055,
+      "event_type": "DEADLINE_MISSED",
+      "request_id": "request-00036",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "absolute_deadline_ms": 11733.30416335055
+      }
+    },
+    {
+      "sequence": 219,
+      "timestamp_ms": 11852.4550329249,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1651
+      }
+    },
+    {
+      "sequence": 220,
+      "timestamp_ms": 11852.4550329249,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00037",
+        "predicted_completion_ms": 11853.0700484249,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 221,
+      "timestamp_ms": 11852.4550329249,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 222,
+      "timestamp_ms": 11852.4550329249,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 223,
+      "timestamp_ms": 11853.0700484249,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 224,
+      "timestamp_ms": 11853.0700484249,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00037",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 225,
+      "timestamp_ms": 11867.261735815317,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00038",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1167
+      }
+    },
+    {
+      "sequence": 226,
+      "timestamp_ms": 11867.261735815317,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00038",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00038",
+        "predicted_completion_ms": 11893.402343875317,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 227,
+      "timestamp_ms": 11881.056935815317,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00038",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 228,
+      "timestamp_ms": 11881.056935815317,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00038",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 229,
+      "timestamp_ms": 11881.376743875317,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00038",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 230,
+      "timestamp_ms": 11893.402343875317,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00038",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 231,
+      "timestamp_ms": 12143.183881733426,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00039",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1477
+      }
+    },
+    {
+      "sequence": 232,
+      "timestamp_ms": 12143.183881733426,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00039",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00039",
+        "predicted_completion_ms": 12367.897885453425,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 233,
+      "timestamp_ms": 12262.545481733427,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00039",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 234,
+      "timestamp_ms": 12262.545481733427,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00039",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 235,
+      "timestamp_ms": 12262.693085453426,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00039",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 236,
+      "timestamp_ms": 12367.897885453425,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00039",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.7140037199988,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 237,
+      "timestamp_ms": 13082.207119335995,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 17
+      }
+    },
+    {
+      "sequence": 238,
+      "timestamp_ms": 13082.207119335995,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00040",
+        "predicted_completion_ms": 13082.822134835995,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 239,
+      "timestamp_ms": 13082.207119335995,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 240,
+      "timestamp_ms": 13082.207119335995,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 241,
+      "timestamp_ms": 13082.822134835995,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 242,
+      "timestamp_ms": 13082.822134835995,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00040",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 243,
+      "timestamp_ms": 13282.528822998205,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00041",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1870
+      }
+    },
+    {
+      "sequence": 244,
+      "timestamp_ms": 13282.528822998205,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00041",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00041",
+        "predicted_completion_ms": 13308.669431058206,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 245,
+      "timestamp_ms": 13296.324022998206,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00041",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 246,
+      "timestamp_ms": 13296.324022998206,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00041",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 247,
+      "timestamp_ms": 13296.643831058205,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00041",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 248,
+      "timestamp_ms": 13308.669431058206,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00041",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 249,
+      "timestamp_ms": 13423.920982428092,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00042",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 773
+      }
+    },
+    {
+      "sequence": 250,
+      "timestamp_ms": 13423.920982428092,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00042",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00042",
+        "predicted_completion_ms": 13648.63498614809,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 251,
+      "timestamp_ms": 13543.282582428092,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00042",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 252,
+      "timestamp_ms": 13543.282582428092,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00042",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 253,
+      "timestamp_ms": 13543.43018614809,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00042",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 254,
+      "timestamp_ms": 13575.479721564176,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 1633
+      }
+    },
+    {
+      "sequence": 255,
+      "timestamp_ms": 13575.479721564176,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00043",
+        "predicted_completion_ms": 13576.094737064175,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 256,
+      "timestamp_ms": 13575.479721564176,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 257,
+      "timestamp_ms": 13575.479721564176,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 258,
+      "timestamp_ms": 13576.094737064175,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 259,
+      "timestamp_ms": 13576.094737064175,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00043",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 260,
+      "timestamp_ms": 13648.63498614809,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00042",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 105.2048,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 224.7140037199988,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 261,
+      "timestamp_ms": 13867.095022568948,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00044",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1241
+      }
+    },
+    {
+      "sequence": 262,
+      "timestamp_ms": 13867.095022568948,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00044",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00044",
+        "predicted_completion_ms": 13893.23563062895,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 263,
+      "timestamp_ms": 13880.890222568949,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00044",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 264,
+      "timestamp_ms": 13880.890222568949,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00044",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 265,
+      "timestamp_ms": 13881.210030628949,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00044",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 266,
+      "timestamp_ms": 13893.23563062895,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00044",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 267,
+      "timestamp_ms": 13999.335216962385,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00045",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1797
+      }
+    },
+    {
+      "sequence": 268,
+      "timestamp_ms": 13999.335216962385,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00045",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00045",
+        "predicted_completion_ms": 14224.049220682384,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 269,
+      "timestamp_ms": 14000.0,
+      "event_type": "NETWORK_SLOWDOWN_ENDED",
+      "request_id": null,
+      "device_id": null,
+      "model_id": null,
+      "details": {
+        "link_id": "mobile-to-edge-server",
+        "original_base_latency_ms": 35.0,
+        "temporary_base_latency_ms": 105.0,
+        "original_bandwidth_mbps": 10.0,
+        "temporary_bandwidth_mbps": 2.5,
+        "start_time_ms": 7000.0,
+        "end_time_ms": 14000.0
+      }
+    },
+    {
+      "sequence": 270,
+      "timestamp_ms": 14066.43016333548,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 312
+      }
+    },
+    {
+      "sequence": 271,
+      "timestamp_ms": 14066.43016333548,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00046",
+        "predicted_completion_ms": 14067.04517883548,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 272,
+      "timestamp_ms": 14066.43016333548,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 273,
+      "timestamp_ms": 14066.43016333548,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 274,
+      "timestamp_ms": 14067.04517883548,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 275,
+      "timestamp_ms": 14067.04517883548,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00046",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 276,
+      "timestamp_ms": 14118.696816962385,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00045",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 277,
+      "timestamp_ms": 14118.696816962385,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00045",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 278,
+      "timestamp_ms": 14118.844420682384,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00045",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 279,
+      "timestamp_ms": 14153.895620682384,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00045",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 119.3616,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 154.56040371999916,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 280,
+      "timestamp_ms": 14323.113119562811,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00047",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1073
+      }
+    },
+    {
+      "sequence": 281,
+      "timestamp_ms": 14323.113119562811,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00047",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00047",
+        "predicted_completion_ms": 14349.253727622812,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 282,
+      "timestamp_ms": 14336.908319562812,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00047",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 283,
+      "timestamp_ms": 14336.908319562812,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00047",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 284,
+      "timestamp_ms": 14337.228127622811,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00047",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 285,
+      "timestamp_ms": 14349.253727622812,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00047",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 286,
+      "timestamp_ms": 14683.66710404877,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00048",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1865
+      }
+    },
+    {
+      "sequence": 287,
+      "timestamp_ms": 14683.66710404877,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00048",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00048",
+        "predicted_completion_ms": 14757.456307768769,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 288,
+      "timestamp_ms": 14722.25750404877,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00048",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 289,
+      "timestamp_ms": 14722.25750404877,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00048",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 290,
+      "timestamp_ms": 14722.405107768769,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00048",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 291,
+      "timestamp_ms": 14757.456307768769,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00048",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999811,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 292,
+      "timestamp_ms": 14886.248790593852,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2261
+      }
+    },
+    {
+      "sequence": 293,
+      "timestamp_ms": 14886.248790593852,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00049",
+        "predicted_completion_ms": 14886.863806093852,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 294,
+      "timestamp_ms": 14886.248790593852,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 295,
+      "timestamp_ms": 14886.248790593852,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 296,
+      "timestamp_ms": 14886.863806093852,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 297,
+      "timestamp_ms": 14886.863806093852,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00049",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 298,
+      "timestamp_ms": 15446.536067482348,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00050",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1121
+      }
+    },
+    {
+      "sequence": 299,
+      "timestamp_ms": 15446.536067482348,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00050",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00050",
+        "predicted_completion_ms": 15472.676675542349,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 300,
+      "timestamp_ms": 15460.331267482348,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00050",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 301,
+      "timestamp_ms": 15460.331267482348,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00050",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 302,
+      "timestamp_ms": 15460.651075542348,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00050",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 303,
+      "timestamp_ms": 15472.676675542349,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00050",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 304,
+      "timestamp_ms": 15483.765411273569,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00051",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 72
+      }
+    },
+    {
+      "sequence": 305,
+      "timestamp_ms": 15483.765411273569,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00051",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00051",
+        "predicted_completion_ms": 15557.554614993567,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 306,
+      "timestamp_ms": 15522.355811273568,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00051",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 307,
+      "timestamp_ms": 15522.355811273568,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00051",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 308,
+      "timestamp_ms": 15522.503414993567,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00051",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 309,
+      "timestamp_ms": 15557.554614993567,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00051",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999811,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 310,
+      "timestamp_ms": 15569.928077090915,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2137
+      }
+    },
+    {
+      "sequence": 311,
+      "timestamp_ms": 15569.928077090915,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00052",
+        "predicted_completion_ms": 15570.543092590915,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 312,
+      "timestamp_ms": 15569.928077090915,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 313,
+      "timestamp_ms": 15569.928077090915,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 314,
+      "timestamp_ms": 15570.543092590915,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 315,
+      "timestamp_ms": 15570.543092590915,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00052",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 316,
+      "timestamp_ms": 15601.200210995967,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00053",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1487
+      }
+    },
+    {
+      "sequence": 317,
+      "timestamp_ms": 15601.200210995967,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00053",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00053",
+        "predicted_completion_ms": 15627.340819055968,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 318,
+      "timestamp_ms": 15607.816760721817,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00054",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 1926
+      }
+    },
+    {
+      "sequence": 319,
+      "timestamp_ms": 15607.816760721817,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00054",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00054",
+        "predicted_completion_ms": 15681.605964441815,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 320,
+      "timestamp_ms": 15614.995410995967,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00053",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 321,
+      "timestamp_ms": 15614.995410995967,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00053",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 322,
+      "timestamp_ms": 15615.315219055967,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00053",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 323,
+      "timestamp_ms": 15627.340819055968,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00053",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 324,
+      "timestamp_ms": 15646.407160721816,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00054",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 325,
+      "timestamp_ms": 15646.407160721816,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00054",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 326,
+      "timestamp_ms": 15646.554764441815,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00054",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 327,
+      "timestamp_ms": 15681.605964441815,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00054",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920371999811,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 328,
+      "timestamp_ms": 15762.144625607976,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 469
+      }
+    },
+    {
+      "sequence": 329,
+      "timestamp_ms": 15762.144625607976,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00055",
+        "predicted_completion_ms": 15762.759641107976,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 330,
+      "timestamp_ms": 15762.144625607976,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 331,
+      "timestamp_ms": 15762.144625607976,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 332,
+      "timestamp_ms": 15762.759641107976,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 4,
+        "prediction_correct": false
+      }
+    },
+    {
+      "sequence": 333,
+      "timestamp_ms": 15762.759641107976,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00055",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 334,
+      "timestamp_ms": 15980.481202844372,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00056",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 1270
+      }
+    },
+    {
+      "sequence": 335,
+      "timestamp_ms": 15980.481202844372,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00056",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00056",
+        "predicted_completion_ms": 16006.621810904373,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 336,
+      "timestamp_ms": 15994.276402844373,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00056",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 337,
+      "timestamp_ms": 15994.276402844373,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00056",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 338,
+      "timestamp_ms": 15994.596210904372,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00056",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 339,
+      "timestamp_ms": 16006.621810904373,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00056",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060000886,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 340,
+      "timestamp_ms": 16505.152006751126,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00057",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2603
+      }
+    },
+    {
+      "sequence": 341,
+      "timestamp_ms": 16505.152006751126,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00057",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00057",
+        "predicted_completion_ms": 16578.94121047113,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 342,
+      "timestamp_ms": 16543.742406751127,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00057",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 343,
+      "timestamp_ms": 16543.742406751127,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00057",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 344,
+      "timestamp_ms": 16543.89001047113,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00057",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 345,
+      "timestamp_ms": 16578.94121047113,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00057",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000357,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 346,
+      "timestamp_ms": 16680.81542178575,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2555
+      }
+    },
+    {
+      "sequence": 347,
+      "timestamp_ms": 16680.81542178575,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00058",
+        "predicted_completion_ms": 16681.430437285748,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 348,
+      "timestamp_ms": 16680.81542178575,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 349,
+      "timestamp_ms": 16680.81542178575,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 350,
+      "timestamp_ms": 16681.430437285748,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 351,
+      "timestamp_ms": 16681.430437285748,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00058",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 352,
+      "timestamp_ms": 16734.811577882865,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00059",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 932
+      }
+    },
+    {
+      "sequence": 353,
+      "timestamp_ms": 16734.811577882865,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00059",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00059",
+        "predicted_completion_ms": 16760.952185942868,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 354,
+      "timestamp_ms": 16736.590431052155,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00060",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.95,
+        "feature_vector_id": 1862
+      }
+    },
+    {
+      "sequence": 355,
+      "timestamp_ms": 16736.590431052155,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00060",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00060",
+        "predicted_completion_ms": 16810.379634772158,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 356,
+      "timestamp_ms": 16748.606777882866,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00059",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 357,
+      "timestamp_ms": 16748.606777882866,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00059",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 358,
+      "timestamp_ms": 16748.926585942867,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00059",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 4,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 359,
+      "timestamp_ms": 16760.952185942868,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00059",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060002705,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 360,
+      "timestamp_ms": 16775.180831052156,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00060",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 361,
+      "timestamp_ms": 16775.180831052156,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00060",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 362,
+      "timestamp_ms": 16775.328434772156,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00060",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 363,
+      "timestamp_ms": 16803.66697648176,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 247
+      }
+    },
+    {
+      "sequence": 364,
+      "timestamp_ms": 16803.66697648176,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00061",
+        "predicted_completion_ms": 16804.28199198176,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 365,
+      "timestamp_ms": 16803.66697648176,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 366,
+      "timestamp_ms": 16803.66697648176,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 367,
+      "timestamp_ms": 16804.28199198176,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 368,
+      "timestamp_ms": 16804.28199198176,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00061",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 369,
+      "timestamp_ms": 16810.379634772158,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00060",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000357,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 370,
+      "timestamp_ms": 16933.576440762892,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00062",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2387
+      }
+    },
+    {
+      "sequence": 371,
+      "timestamp_ms": 16933.576440762892,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00062",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00062",
+        "predicted_completion_ms": 16959.717048822895,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 372,
+      "timestamp_ms": 16947.371640762893,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00062",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 373,
+      "timestamp_ms": 16947.371640762893,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00062",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 374,
+      "timestamp_ms": 16947.691448822894,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00062",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 2,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 375,
+      "timestamp_ms": 16959.717048822895,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00062",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060002705,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 376,
+      "timestamp_ms": 17244.60826750229,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00063",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 790
+      }
+    },
+    {
+      "sequence": 377,
+      "timestamp_ms": 17244.60826750229,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00063",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00063",
+        "predicted_completion_ms": 17318.397471222295,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 378,
+      "timestamp_ms": 17283.198667502293,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00063",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 379,
+      "timestamp_ms": 17283.198667502293,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00063",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 380,
+      "timestamp_ms": 17283.346271222294,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00063",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 2,
+        "prediction_correct": false
+      }
+    },
+    {
+      "sequence": 381,
+      "timestamp_ms": 17313.806952369087,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1007
+      }
+    },
+    {
+      "sequence": 382,
+      "timestamp_ms": 17313.806952369087,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00064",
+        "predicted_completion_ms": 17314.421967869086,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 383,
+      "timestamp_ms": 17313.806952369087,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 384,
+      "timestamp_ms": 17313.806952369087,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 385,
+      "timestamp_ms": 17314.421967869086,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 1,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 386,
+      "timestamp_ms": 17314.421967869086,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00064",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 387,
+      "timestamp_ms": 17318.397471222295,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00063",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000357,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 388,
+      "timestamp_ms": 17512.410335686804,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00065",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2845
+      }
+    },
+    {
+      "sequence": 389,
+      "timestamp_ms": 17512.410335686804,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00065",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00065",
+        "predicted_completion_ms": 17538.550943746806,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 390,
+      "timestamp_ms": 17526.205535686804,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00065",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 391,
+      "timestamp_ms": 17526.205535686804,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00065",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 392,
+      "timestamp_ms": 17526.525343746805,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00065",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 393,
+      "timestamp_ms": 17538.550943746806,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00065",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060002705,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 394,
+      "timestamp_ms": 17591.749449234307,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00066",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 1602
+      }
+    },
+    {
+      "sequence": 395,
+      "timestamp_ms": 17591.749449234307,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00066",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00066",
+        "predicted_completion_ms": 17665.53865295431,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 396,
+      "timestamp_ms": 17630.339849234308,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00066",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 397,
+      "timestamp_ms": 17630.339849234308,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00066",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 398,
+      "timestamp_ms": 17630.48745295431,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00066",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 6,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 399,
+      "timestamp_ms": 17665.53865295431,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00066",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000357,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 400,
+      "timestamp_ms": 18228.558561286183,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2577
+      }
+    },
+    {
+      "sequence": 401,
+      "timestamp_ms": 18228.558561286183,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00067",
+        "predicted_completion_ms": 18229.173576786183,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 402,
+      "timestamp_ms": 18228.558561286183,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 403,
+      "timestamp_ms": 18228.558561286183,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 404,
+      "timestamp_ms": 18229.173576786183,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 405,
+      "timestamp_ms": 18229.173576786183,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00067",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    },
+    {
+      "sequence": 406,
+      "timestamp_ms": 19645.67134803684,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00068",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 100.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 578
+      }
+    },
+    {
+      "sequence": 407,
+      "timestamp_ms": 19645.67134803684,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00068",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00068",
+        "predicted_completion_ms": 19671.811956096844,
+        "predicted_energy_units": 0.72852237,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 408,
+      "timestamp_ms": 19659.466548036842,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00068",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 409,
+      "timestamp_ms": 19659.466548036842,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00068",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 1.3,
+        "predicted_inference_time_ms": 0.31980806,
+        "simulated_inference_time_ms": 0.31980806
+      }
+    },
+    {
+      "sequence": 410,
+      "timestamp_ms": 19659.786356096844,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00068",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.31980806,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 411,
+      "timestamp_ms": 19671.811956096844,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00068",
+      "device_id": "gateway",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 13.7952,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.31980806,
+        "return_time_ms": 12.0256,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 26.140608060002705,
+        "deadline_met": true,
+        "estimated_energy_units": 0.72852237
+      }
+    },
+    {
+      "sequence": 412,
+      "timestamp_ms": 19688.63644292381,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00069",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 180.0,
+        "minimum_accuracy": 0.9,
+        "feature_vector_id": 2233
+      }
+    },
+    {
+      "sequence": 413,
+      "timestamp_ms": 19688.63644292381,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00069",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00069",
+        "predicted_completion_ms": 19762.425646643813,
+        "predicted_energy_units": 0.6793211299999999,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 414,
+      "timestamp_ms": 19727.22684292381,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00069",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 415,
+      "timestamp_ms": 19727.22684292381,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00069",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 0.6,
+        "predicted_inference_time_ms": 0.14760372,
+        "simulated_inference_time_ms": 0.14760372
+      }
+    },
+    {
+      "sequence": 416,
+      "timestamp_ms": 19727.37444664381,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00069",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.14760372,
+        "actual_prediction": 5,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 417,
+      "timestamp_ms": 19762.425646643813,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00069",
+      "device_id": "edge-server",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 38.5904,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.14760372,
+        "return_time_ms": 35.0512,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 73.78920372000357,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6793211299999999
+      }
+    },
+    {
+      "sequence": 418,
+      "timestamp_ms": 19877.088286881113,
+      "event_type": "REQUEST_ARRIVED",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": null,
+      "details": {
+        "deadline_ms": 300.0,
+        "minimum_accuracy": 0.93,
+        "feature_vector_id": 2935
+      }
+    },
+    {
+      "sequence": 419,
+      "timestamp_ms": 19877.088286881113,
+      "event_type": "SCHEDULER_DECISION",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "decision_request_id": "request-00070",
+        "predicted_completion_ms": 19877.703302381113,
+        "predicted_energy_units": 0.6150155,
+        "predicted_model_accuracy": 0.9548693586698337,
+        "expected_to_meet_deadline": true,
+        "decision_reason": "selected next compatible device and fastest qualifying model"
+      }
+    },
+    {
+      "sequence": 420,
+      "timestamp_ms": 19877.088286881113,
+      "event_type": "REQUEST_QUEUED",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_length": 0
+      }
+    },
+    {
+      "sequence": 421,
+      "timestamp_ms": 19877.088286881113,
+      "event_type": "INFERENCE_STARTED",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "queue_wait_ms": 0.0,
+        "measured_mean_latency_ms": 0.2460062,
+        "device_speed_multiplier": 2.5,
+        "predicted_inference_time_ms": 0.6150155,
+        "simulated_inference_time_ms": 0.6150155
+      }
+    },
+    {
+      "sequence": 422,
+      "timestamp_ms": 19877.703302381113,
+      "event_type": "INFERENCE_COMPLETED",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "inference_time_ms": 0.6150155,
+        "actual_prediction": 3,
+        "prediction_correct": true
+      }
+    },
+    {
+      "sequence": 423,
+      "timestamp_ms": 19877.703302381113,
+      "event_type": "REQUEST_RETURNED",
+      "request_id": "request-00070",
+      "device_id": "mobile",
+      "model_id": "logistic-regression-v1",
+      "details": {
+        "upload_time_ms": 0.0,
+        "queue_wait_ms": 0.0,
+        "inference_time_ms": 0.6150155,
+        "return_time_ms": 0.0,
+        "scheduler_overhead_ms": 0.0,
+        "end_to_end_latency_ms": 0.6150154999995721,
+        "deadline_met": true,
+        "estimated_energy_units": 0.6150155
+      }
+    }
+  ]
+}

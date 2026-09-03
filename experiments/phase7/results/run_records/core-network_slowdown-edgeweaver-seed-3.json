@@ -1,0 +1,63 @@
+{
+  "format_version": "edgeweaver-experiment-v1",
+  "experiment_id": "edgeweaver-core-study-v1",
+  "code_version": "phase7-v1",
+  "run_id": "core-network_slowdown-edgeweaver-seed-3",
+  "kind": "core",
+  "scenario_id": "network_slowdown",
+  "scheduler_name": "edgeweaver",
+  "seed": 3,
+  "identity_sha256": "a4b781b7e2c9f882c30f1b9827d1f41a48b9146be3843473b95d650156924b47",
+  "trace_id": "network_slowdown-seed-3",
+  "trace_reference": "experiments/phase7/traces/network_slowdown-seed-3-cef111cd10f8.json",
+  "trace_sha256": "6ac9607a1a9c512b247d4c1175251f39cd843f414161ac4168f524402ae4bfd8",
+  "scenario_config_sha256": "cef111cd10f8923437648942de9a7fc8a7f28855acda39983310926223e1fed1",
+  "devices_config_sha256": "b5dc9b6bc9c454cb6cc6228057470808141c7648c7fbd0680b4dd66c92ced36e",
+  "network_config_sha256": "d90f1f94b05b894cd493954c1c71d5a6498d632572d9bfe37b4502eb5028d1f1",
+  "simulation_config_sha256": "f0a3c1479d09349f28bb4972467b278db6d80b115be034dfd2daa845bf0dc294",
+  "model_profiles_sha256": "f50c9b676c90d9c165b194daa7631076d82751bf797681f7f9041f67a00debb7",
+  "model_artifacts_sha256": "b3d883095906ae9e8a927c8a3bfd586907bd45ece7a5b5787c610d0fc7bd31bd",
+  "dataset_sha256": "ee83a444b0a5155948a1d49301a5b836a82ffaf16bf7a5728c9b5dd72941bc4a",
+  "source_sha256": "ea74ce291fcbf8c52f900a2183addae725ebfe6bd1c503236622f734a8d0eb7c",
+  "runtime_versions": {
+    "python": "3.13.5",
+    "joblib": "1.6.0",
+    "numpy": "2.5.2",
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "simpy": "4.1.2"
+  },
+  "model_profile_ids": [
+    "logistic-regression-v1",
+    "mlp-v1",
+    "random-forest-v1"
+  ],
+  "configuration_references": {
+    "devices": "configs/devices.yaml",
+    "network": "configs/network.yaml",
+    "simulation": "configs/simulation.yaml",
+    "scenario": "configs/scenarios/network_slowdown.yaml",
+    "profiles": "artifacts/profiles",
+    "models": "artifacts/models",
+    "dataset": "data/raw/UCI HAR Dataset",
+    "source": "edgeweaver"
+  },
+  "request_count": 78,
+  "simulation_duration_ms": 20000.0,
+  "executed_at_utc": "2026-09-03T13:29:47.826155Z",
+  "git_commit": null,
+  "artifact_references": {
+    "raw_run": "experiments/phase7/raw/runs/core-network_slowdown-edgeweaver-seed-3.json",
+    "event_log": "experiments/phase7/raw/events/core-network_slowdown-edgeweaver-seed-3.json",
+    "summary_json": "experiments/phase7/results/per_run/core-network_slowdown-edgeweaver-seed-3.json",
+    "summary_csv": "experiments/phase7/results/per_run_tidy/core-network_slowdown-edgeweaver-seed-3.csv"
+  },
+  "artifact_sha256": {
+    "raw_run": "ca431135a0017a48c4584ba8375c855382612a63848807d6303582f31c2d6819",
+    "event_log": "3e2285dd2c9a7ae6da60846cc39fcff9a93cae2ebdb54384bdb8f6f862fdbc52",
+    "summary_json": "48ff6a345d383a90babf30bae0ae7c6eec067d68d81ef966ecf66515a6ba5c94",
+    "summary_csv": "8190ed92b388b12b1b00f1f5324d075d5f5002865cf1e7fa6ffeb5c23819dd50"
+  }
+}
