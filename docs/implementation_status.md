@@ -197,9 +197,10 @@ The package now declares pandas and includes an optional exact direct-version co
 
 The small integration test loads profiles/configuration and one fixed trace, runs all four policies,
 exports detailed/events/JSON/CSV outputs, and validates required metrics without training or running
-the full matrix. Final checks passed: 120 tests, Ruff lint/format, strict mypy, artifact reload,
-representative CLI simulation, 80+10/20-pair validation, resume skipping 90/90, byte-identical forced
-replay, dependency check, and saved-results-only regeneration.
+the full matrix. Final QA corrected virtual-environment activation guidance, an ambiguous report run
+count, and duplicate `edgeweaver` CLI choices. Final checks passed: 121 tests, Ruff lint/format,
+strict mypy, artifact reload, representative CLI simulation, 80+10/20-pair validation, resume
+skipping 90/90, byte-identical forced replay, dependency check, and saved-results-only regeneration.
 
 ```bash
 python -m pip install -c constraints.txt -e ".[dev]"
@@ -215,5 +216,45 @@ pytest
 
 Documentation is in `README.md`, `docs/methodology.md`, `docs/report.md`, and
 `docs/demo_script.md`; the QA handoff is `docs/qa_checkpoint_04.md`. No unresolved core blocker is
-known. Phase 9's FastAPI/React presentation layer remains explicitly deferred and no API/frontend
-code exists.
+known.
+
+## Final frontend phase — complete
+
+Implemented the local React 19/Vite/TypeScript presentation layer and minimal FastAPI bridge. The
+Figma-provided neon Decision Inspector was reproduced with real candidate, assignment, outcome,
+prediction, timing, deadline, and profile-update data. Matching views provide Project Overview, Run
+One Simulation, Compare Schedulers, and Failure Cases. The UI also includes a guided same-trace
+demo, plain-language help and glossary, progressive candidate/failure disclosure, focused
+two-policy comparison, event playback, accessible focus/responsive behavior, and refresh-safe hash
+routes for guided presets and exact Inspector run/request links.
+
+The API exposes project/model/scenario/scheduler metadata, saved runs and events, aggregate results,
+figures, failure cases, and synchronous single-run execution by calling the existing experiment and
+simulation packages. Built frontend files are served by FastAPI; Vite proxies the same API in
+development. Interactive runs use `experiments/ui/` and remain separate from the validated study.
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ..
+python scripts/run_api.py
+# open http://127.0.0.1:8000
+
+pytest
+ruff check edgeweaver api scripts tests
+ruff format --check edgeweaver api scripts tests
+mypy edgeweaver api scripts/run_api.py scripts/run_simulation.py \
+  scripts/run_experiments.py scripts/generate_research_outputs.py
+cd frontend && npm test && npm run build
+```
+
+All 126 Python tests and eight frontend tests pass, along with Python lint/format/type checks, the
+frontend production build, a live browser/API simulation, and validation of all 80 core plus 10
+ablation runs. The complete local research project is now implemented; cloud hosting,
+authentication, databases, and production backend infrastructure remain intentionally out of scope.
+
+A Windows-only Decision Inspector access failure was subsequently corrected: the existing UCI HAR
+tree now inherits workspace read permissions, and saved-run label rendering uses the canonical UCI
+HAR label map rather than reading an optional raw-data text file. The regression suite now contains
+126 Python tests.

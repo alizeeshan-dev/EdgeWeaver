@@ -17,6 +17,7 @@ from edgeweaver.experiments import (
 from edgeweaver.schedulers import EDGEWEAVER_VARIANTS
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+EXPERIMENT_SCHEDULER_CHOICES = tuple(dict.fromkeys((*CORE_SCHEDULERS, *EDGEWEAVER_VARIANTS)))
 
 
 def main() -> None:
@@ -27,7 +28,7 @@ def main() -> None:
     parser.add_argument(
         "--scheduler",
         action="append",
-        choices=(*CORE_SCHEDULERS, *EDGEWEAVER_VARIANTS),
+        choices=EXPERIMENT_SCHEDULER_CHOICES,
         default=[],
     )
     parser.add_argument("--seed", action="append", type=int, default=[])

@@ -150,7 +150,7 @@ post-hoc seed selection were performed.
 
 ## 8. Results
 
-All 80 core runs completed, covering 7,823 requests across core and ablation runs with no execution
+All 80 core and 10 ablation runs completed, processing 7,823 requests in total with no execution
 rejections. The table reports core means across five seeds. Energy is estimated normalized units per
 completed request.
 
@@ -280,5 +280,6 @@ adaptive policy avoided the slowed device.
 That outcome is scientifically useful. It shows that scheduler claims depend on realized model and
 workload trade-offs, not policy intent alone. The repository preserves the measurements, paired
 traces, all seeds, structured decisions, raw results, aggregates, and absent-case evidence needed to
-inspect that conclusion. A future presentation layer can expose these artifacts, but the non-frontend
-study is already reproducible from the command line.
+inspect that conclusion. The local React/FastAPI presentation layer now exposes these artifacts and
+can execute one simulation through the same package logic; the study remains independently
+reproducible from the command line.

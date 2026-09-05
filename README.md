@@ -25,6 +25,9 @@ flowchart LR
     SIM --> EVENTS["Structured events and<br/>request results"]
     EVENTS --> METRICS["Per-run metrics and<br/>tidy aggregate tables"]
     METRICS --> FIGURES["Eight research figures,<br/>cases, and findings"]
+    SIM --> API["Minimal local<br/>FastAPI bridge"]
+    METRICS --> API
+    API --> UI["React + TypeScript<br/>research dashboard"]
 ```
 
 UCI HAR supplies 561-feature sensor samples for six activities. Three scikit-learn models are trained
@@ -57,6 +60,12 @@ Python 3.12 or newer is required.
 
 ```bash
 python -m venv .venv
+```
+
+Activate it with `.venv\Scripts\Activate.ps1` on Windows PowerShell or
+`source .venv/bin/activate` on macOS/Linux, then install the project:
+
+```bash
 python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
@@ -111,11 +120,33 @@ Run the normal test and quality checks without downloading or retraining:
 
 ```bash
 pytest
-ruff check edgeweaver scripts tests
-ruff format --check edgeweaver scripts tests
-mypy edgeweaver scripts/run_simulation.py scripts/run_experiments.py \
-  scripts/generate_research_outputs.py
+ruff check edgeweaver api scripts tests
+ruff format --check edgeweaver api scripts tests
+mypy edgeweaver api scripts/run_api.py scripts/run_simulation.py \
+  scripts/run_experiments.py scripts/generate_research_outputs.py
 ```
+
+## Local research dashboard
+
+The React/Vite interface is a local presentation layer over the same Python simulation,
+scheduler, metrics, and saved-result code used by the command-line workflow. Install and build it
+once, then start the local FastAPI bridge:
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ..
+python scripts/run_api.py
+```
+
+Open `http://127.0.0.1:8000`. The five views cover project/model/device context, one-simulation
+execution, per-request decision inspection, saved scheduler comparisons, and real extracted failure
+cases. The API runs locally without authentication or a database. Interactive simulations are saved
+under `experiments/ui/` and do not modify the validated Phase 7 study.
+
+For frontend development, run `python scripts/run_api.py` and `npm run dev` in separate terminals;
+Vite proxies `/api` to the local service. Frontend checks are `npm test` and `npm run build`.
 
 ## Results
 
@@ -145,6 +176,8 @@ hypothesis succeed. See [the report](docs/report.md), [methodology](docs/methodo
 
 ```text
 edgeweaver/               ML, simulation, schedulers, scenarios, metrics, experiments, analysis
+api/                      Minimal local FastAPI bridge over package logic and saved artifacts
+frontend/                 React/Vite/TypeScript research dashboard
 configs/                  Devices, network, simulation, scenarios, and experiment matrix
 scripts/                  Dataset, training, profiling, simulation, experiment, analysis CLIs
 artifacts/models/         Generated trained models, preprocessors, and metadata
@@ -165,5 +198,5 @@ docs/                     Methodology, report, demo script, status, and QA hando
 - Five seeds describe this configured study but provide limited statistical resolution.
 - These results do not prove that EdgeWeaver works on production edge infrastructure.
 
-The project is fully usable from the command line. A local React presentation interface and minimal
-FastAPI bridge are intentionally deferred to Phase 9 and are not represented as implemented here.
+The complete research workflow remains usable from the command line; the local dashboard is an
+additional presentation interface. It is not a deployed or production service.

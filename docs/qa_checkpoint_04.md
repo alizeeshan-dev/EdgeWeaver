@@ -114,10 +114,11 @@ UCI dataset or `joblib` models. Ordinary pytest must not download, retrain, repr
 
 ## Assumptions, caveats, and deferred work
 
-All 90 result records currently have no Git commit because the workspace has no resolvable committed
-HEAD; source SHA-256 is therefore the executable-code provenance fallback. Stored scikit-learn
-artifacts should be retrained when using an incompatible library environment; runtime versions are
-part of experiment identity. Five seeds and one configured workload family limit inference.
+All 90 saved result records have a null Git commit because they were generated before this workspace
+had a resolvable committed HEAD; source SHA-256 is therefore their executable-code provenance
+fallback. Stored scikit-learn artifacts should be retrained when using an incompatible library
+environment; runtime versions are part of experiment identity. Five seeds and one configured
+workload family limit inference.
 
 Phase 9 remains intentionally absent: no FastAPI, React, Vite, TypeScript, browser UI, CORS, auth,
 database, deployment, or production infrastructure. This checkpoint is a QA handoff, not a claim

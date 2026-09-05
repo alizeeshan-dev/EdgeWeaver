@@ -10,3 +10,6 @@ build/
 /artifacts/phase1-fixture-result.json
 /artifacts/models/**/*.joblib
 /data/raw/
+/experiments/ui/
+/frontend/node_modules/
+/frontend/dist/

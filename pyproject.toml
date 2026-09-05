@@ -9,6 +9,7 @@ description = "Local research prototype for simulated edge-inference scheduling"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.116,<1",
     "joblib>=1.4,<2",
     "matplotlib>=3.9,<4",
     "numpy>=2.0,<3",
@@ -17,10 +18,12 @@ dependencies = [
     "PyYAML>=6,<7",
     "scikit-learn>=1.6,<2",
     "simpy>=4.1,<5",
+    "uvicorn>=0.35,<1",
 ]
 
 [project.optional-dependencies]
 dev = [
+    "httpx>=0.28,<1",
     "mypy>=1.11,<2",
     "pytest>=8.3,<9",
     "ruff>=0.8,<1",
@@ -31,7 +34,7 @@ dev = [
 edgeweaver-fixture = "edgeweaver.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["edgeweaver*"]
+include = ["api*", "edgeweaver*"]
 
 [tool.pytest.ini_options]
 addopts = "-q"

@@ -31,8 +31,21 @@ from edgeweaver.experiments import (
 )
 from edgeweaver.metrics import PerRunMetrics
 from edgeweaver.workloads import WorkloadTrace
+from scripts.run_experiments import EXPERIMENT_SCHEDULER_CHOICES
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_experiment_cli_scheduler_choices_are_unique() -> None:
+    assert len(EXPERIMENT_SCHEDULER_CHOICES) == len(set(EXPERIMENT_SCHEDULER_CHOICES))
+    assert EXPERIMENT_SCHEDULER_CHOICES == (
+        "round_robin",
+        "fastest_device",
+        "min_completion",
+        "edgeweaver",
+        "edgeweaver_no_model_switching",
+        "edgeweaver_no_online_update",
+    )
 
 
 def _configured_runner(tmp_path: Path) -> tuple[CoreExperimentConfig, ExperimentRunner]:
