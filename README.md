@@ -1,202 +1,337 @@
 # EdgeWeaver
 
-EdgeWeaver is a local research prototype for studying how inference requests should be assigned
-across simulated heterogeneous edge devices when deadlines, model accuracy, queueing, network delay,
-and estimated energy all matter. It provides a reproducible command-line workflow from the UCI Human
-Activity Recognition (HAR) dataset through model training, local profiling, SimPy simulation,
-scheduler comparison, ablations, metrics, figures, and research findings.
+EdgeWeaver is a local research prototype for evaluating how interactive machine-learning inference
+requests should be assigned across heterogeneous edge resources. It combines reproducibly trained
+models with deterministic discrete-event simulation, four scheduling policies, controlled workload
+conditions, per-request event traces, and a local inspection dashboard.
 
-This is a simulation study, not production edge infrastructure. Only model inference on the profiling
-computer was physically timed. The mobile, gateway, edge server, remote links, slowdowns, and energy
-values are simulated.
+> **Scope.** Model quality, artifact size, and single-request inference latency were measured on one
+> computer. Mobile, gateway, and edge-server behavior—including networking, queueing, slowdowns, and
+> energy—is simulated. This repository does not implement or claim production edge infrastructure.
 
-## Research workflow
+## Research question
+
+How should an inference request be assigned to a device and model when its relative deadline and
+minimum-accuracy requirement must be balanced against queue state, network transfer time, model
+execution time, and estimated energy?
+
+The study evaluates five hypotheses concerning burst congestion, completion-time scheduling, model
+switching, estimated energy, and online latency adaptation. Hypotheses are evaluated against the
+observed runs rather than assumed to hold; the completed experiment supports only some of the
+intended contrasts.
+
+## What the project does
+
+1. Downloads and validates the official UCI Human Activity Recognition Using Smartphones dataset,
+   preserving its predefined train/test split.
+2. Trains logistic-regression, random-forest, and multilayer-perceptron classifiers with saved,
+   reproducible preprocessing.
+3. Measures held-out accuracy, macro F1, artifact size, and local single-request latency.
+4. Uses the measured model profiles as immutable inputs to a SimPy simulation of three devices and
+   two remote links.
+5. Replays seeded UCI HAR request traces through Round Robin, Fastest Device, Minimum Completion
+   Time, and EdgeWeaver schedulers.
+6. Exports structured decisions, lifecycle events, per-request results, aggregate metrics, figures,
+   ablations, and failure-case evidence.
+7. Exposes the same Python research core and saved outputs through a local FastAPI and React
+   dashboard.
+
+## Architecture
 
 ```mermaid
 flowchart LR
-    DATA["UCI HAR<br/>official train/test split"] --> TRAIN["Train and evaluate<br/>three sklearn models"]
-    TRAIN --> ARTIFACTS["Saved models,<br/>preprocessors, metadata"]
-    ARTIFACTS --> PROFILE["Local single-request<br/>latency profiling"]
-    PROFILE --> PROFILES["Measured model profiles"]
-    CONFIG["YAML devices, network,<br/>and scenarios"] --> SIM["Scheduler-agnostic<br/>SimPy engine"]
-    PROFILES --> SIM
+    UCI["UCI HAR<br/>official split"] --> TRAIN["Training and<br/>preprocessing"]
+    TRAIN --> MODELS["joblib models<br/>and metadata"]
+    MODELS --> PROFILE["Single-request<br/>local profiling"]
+    PROFILE --> MP["Measured model<br/>profiles"]
+    YAML["Device, network,<br/>scenario YAML"] --> SIM["Scheduler-agnostic<br/>SimPy engine"]
     TRACE["Seeded paired<br/>request traces"] --> SIM
-    SCHED["Four scheduler policies"] --> SIM
-    SIM --> EVENTS["Structured events and<br/>request results"]
-    EVENTS --> METRICS["Per-run metrics and<br/>tidy aggregate tables"]
-    METRICS --> FIGURES["Eight research figures,<br/>cases, and findings"]
-    SIM --> API["Minimal local<br/>FastAPI bridge"]
-    METRICS --> API
-    API --> UI["React + TypeScript<br/>research dashboard"]
+    MP --> SIM
+    SCHED["Four schedulers"] --> SIM
+    SIM --> EVENTS["Requests, decisions,<br/>events, outcomes"]
+    EVENTS --> METRICS["Per-run metrics and<br/>cross-seed aggregation"]
+    METRICS --> OUTPUTS["Tables, figures,<br/>findings, failure cases"]
+    SIM --> API["Local FastAPI bridge"]
+    OUTPUTS --> API
+    API --> UI["React research dashboard"]
 ```
 
-UCI HAR supplies 561-feature sensor samples for six activities. Three scikit-learn models are trained
-against its predefined split:
+The main responsibility boundaries are:
 
-| Role | Model | Test accuracy | Macro F1 | Measured mean single-request latency |
-|---|---|---:|---:|---:|
-| Light | Logistic regression | 95.49% | 95.48% | 0.246 ms |
-| Balanced | Random forest | 92.84% | 92.64% | 12.660 ms |
-| Heavy | MLP | 94.57% | 94.58% | 0.336 ms |
+| Layer | Responsibility | Implementation |
+|---|---|---|
+| ML | Dataset validation, preprocessing, training, profiling, artifact reload | `edgeweaver/ml/` |
+| Workload/scenario | Seeded held-out samples, deadlines, accuracy constraints, slowdown schedules | `edgeweaver/scenarios.py`, `edgeweaver/workloads.py` |
+| Simulation | SimPy clock, resources, bounded queues, transfers, execution, prediction, energy, events | `edgeweaver/engine.py` |
+| Scheduling | Shared candidate estimates and policy-specific assignment decisions | `edgeweaver/schedulers/` |
+| Measurement | Per-run metrics, aggregation, figures, findings, failure-case extraction | `edgeweaver/metrics.py`, `edgeweaver/analysis.py`, `edgeweaver/reporting.py` |
+| Interface | Local API over package logic and a five-view research dashboard | `api/`, `frontend/` |
 
-These measurements came from one Windows computer using 500 timed predictions per model. They are
-stored inputs to simulation; simulation never profiles models at runtime.
+### Technology stack
 
-The four policies share one scheduler interface:
+- Python 3.12+, SimPy, Pydantic, PyYAML
+- NumPy, pandas, scikit-learn, joblib
+- Matplotlib for saved research figures
+- FastAPI and Uvicorn for the local interface bridge
+- React 19, TypeScript, and Vite for the dashboard
+- pytest, Ruff, mypy, Vitest, and Testing Library for verification
 
-- **Round Robin** rotates through compatible devices and selects that device's fastest qualifying
-  model without considering queues or network conditions.
-- **Fastest Device** selects the device with the lowest isolated inference time and its most accurate
-  compatible model, deliberately ignoring congestion.
-- **Minimum Completion Time (MCT)** chooses the compatible, accuracy-eligible pair with the earliest
-  predicted completion after queue, network, and inference time.
-- **EdgeWeaver** selects the lowest estimated-energy candidate among those predicted to meet the
-  deadline, falls back to earliest completion if none can, and updates per-device/model execution
-  estimates using a causal EWMA after inference completes.
+## System and scheduling model
 
-## Install
+The official UCI HAR split contains 7,352 training and 2,947 held-out test samples, each with 561
+engineered accelerometer/gyroscope features and one of six activity labels. Saved models are reloaded
+to produce the actual prediction for each simulated request; profile accuracy is used only as the
+scheduler's eligibility estimate.
 
-Python 3.12 or newer is required.
+| Role | Stable model ID | Test accuracy | Macro F1 | Artifact size | Measured mean / P95 latency |
+|---|---|---:|---:|---:|---:|
+| Light | `logistic-regression-v1` | 95.49% | 95.48% | 25,661 B | 0.246 / 0.336 ms |
+| Balanced | `random-forest-v1` | 92.84% | 92.64% | 2,568,840 B | 12.660 / 14.896 ms |
+| Heavy | `mlp-v1` | 94.57% | 94.58% | 1,858,312 B | 0.336 / 0.372 ms |
+
+Latency was measured on the local Windows profiling computer using 20 untimed warm-ups followed by
+500 seeded, one-sample `transform` + `predict` measurements per model with
+`time.perf_counter_ns()`. The complete environment record is in
+[`artifacts/profiles/profiling_environment.json`](artifacts/profiles/profiling_environment.json).
+
+The simulator defines three single-capacity resources in [`configs/devices.yaml`](configs/devices.yaml):
+
+| Device | Speed multiplier | Active power units | Waiting slots | Supported model roles |
+|---|---:|---:|---:|---|
+| Mobile | 2.5 | 1.0 | 20 | light, balanced |
+| Gateway | 1.3 | 2.0 | 40 | light, balanced, heavy |
+| Edge server | 0.6 | 4.0 | 80 | light, balanced, heavy |
+
+Simulated service time is the stored measured mean multiplied by the selected device's speed factor.
+Mobile execution has zero network delay. The gateway link uses 12 ms one-way base latency and
+20 Mbps bandwidth; the edge-server link uses 35 ms and 10 Mbps. Transfer time is base latency plus
+payload bits divided by bandwidth. Estimated energy is reported only in normalized units:
+
+```text
+compute = active power units × simulated inference time (ms)
+network = transferred kilobytes × 0.02 normalized units/kB
+```
+
+All schedulers implement the same interface and receive the same read-only simulation state:
+
+- **Round Robin:** rotates through compatible devices and uses the selected device's fastest model
+  that meets the request's minimum profile accuracy; queue and network state do not select the
+  device.
+- **Fastest Device:** chooses the device with the lowest isolated inference time, then that device's
+  highest-accuracy compatible model; it intentionally ignores congestion and end-to-end network
+  cost.
+- **Minimum Completion Time (MCT):** chooses the accuracy-eligible, queue-admissible device/model
+  pair with the earliest predicted absolute completion, including upload, queued work, inference,
+  return, and scheduler overhead.
+- **EdgeWeaver:** among candidates predicted to meet the deadline, chooses lowest estimated energy,
+  with completion time and stable IDs as tie-breakers. If none is feasible, it chooses earliest
+  completion. After execution, it updates only the selected device/model latency estimate using an
+  EWMA (`alpha = 0.2` by default); measured profile files remain unchanged.
+
+## Experimental methodology
+
+The core experiment is a paired **4 schedulers × 4 scenarios × 5 seeds** design (80 runs). One trace
+is generated before scheduling for each scenario/seed and is reused byte-for-byte by every policy.
+The scenarios are 20 seconds of simulated time:
+
+| Scenario | Configured condition |
+|---|---|
+| Normal | Stable 4 requests/s; mixed 100/180/300 ms deadlines |
+| Bursty | 1.5 requests/s background plus three 1.5 s intervals at 16 requests/s; 80/140/240 ms deadlines |
+| Network slowdown | Normal arrivals; edge-server link latency ×3 and bandwidth ×0.25 during `[7000, 14000)` ms |
+| Device slowdown | 5 requests/s; actual edge-server service time ×3 during `[7000, 14000)` ms |
+
+Two five-seed EdgeWeaver ablations reuse the corresponding core traces: no model switching under
+Bursty Load and no online latency updates under Device Slowdown. The saved study therefore contains
+90 runs in total. Metrics include deadline satisfaction, useful goodput, mean/P95 end-to-end latency,
+actual request accuracy, estimated normalized energy per completion, compute utilization, assigned
+model distribution, and deterministic deadline-miss causes. Aggregate outputs report arithmetic
+means and sample standard deviations across seeds; no significance tests were performed.
+
+See [`docs/methodology.md`](docs/methodology.md) for the complete definitions and
+[`docs/report.md`](docs/report.md) for the research report.
+
+## Verified results
+
+The stored outputs contain all 80 core runs and 10 ablation runs, covering 7,823 requests with zero
+execution rejections. The main observed separation occurred under Network Slowdown. The values below
+are means of the five per-seed metrics; energy is estimated normalized units per completed request.
+
+| Scheduler | Deadline satisfaction | Useful goodput | Mean end-to-end latency | Estimated energy |
+|---|---:|---:|---:|---:|
+| Round Robin | 93.66% | 3.390 requests/s | 50.257 ms | 0.674 |
+| Fastest Device | 79.90% | 2.890 requests/s | 124.231 ms | 0.679 |
+| MCT | 100.00% | 3.610 requests/s | 0.616 ms | 0.615 |
+| EdgeWeaver | 100.00% | 3.610 requests/s | 0.616 ms | 0.615 |
+
+![Deadline satisfaction across scenarios and schedulers](experiments/phase7/figures/deadline_satisfaction.png)
+
+![Mean and P95 end-to-end latency across scenarios and schedulers](experiments/phase7/figures/latency.png)
+
+All four policies averaged 100% deadline satisfaction in Normal, Bursty, and Device Slowdown. The
+measured logistic-regression model was both the most accurate and the lowest-compute practical choice
+in this configuration, so every policy selected it for every assignment. Actual request accuracy was
+therefore policy-independent: 95.99% in Normal and Network Slowdown, 96.42% in Bursty, and 96.30% in
+Device Slowdown.
+
+This realized model ordering also removed the treatment variation needed by the two ablations. Full
+EdgeWeaver and no-model-switching EdgeWeaver both achieved 100% burst deadline satisfaction,
+4.570 requests/s useful goodput, 96.42% actual accuracy, and 0.615 estimated energy units per
+completion. Under Device Slowdown, full and no-update EdgeWeaver both achieved 100% deadline
+satisfaction and 0.617 ms mean latency because both ran locally on mobile rather than on the slowed
+edge server.
+
+![EdgeWeaver ablation results](experiments/phase7/figures/edgeweaver_ablations.png)
+
+Consequently, H1 was **not supported**, H2 was **partially supported**, and H3–H5 were
+**inconclusive**. One of five planned representative failure types was observed: Fastest Device
+missed a deadline during Network Slowdown because 224.566 ms of network transfer dominated
+0.148 ms of inference. The other four case types are explicitly marked absent rather than inferred or
+fabricated. Detailed values remain in
+[`aggregate_results.csv`](experiments/phase7/results/tables/aggregate_results.csv), with the cautious
+hypothesis assessment in
+[`findings_summary.md`](experiments/phase7/results/findings_summary.md).
+
+## Setup and use
+
+Run commands from the repository root. Python 3.12 or newer is required; Node.js and npm are needed
+only for the dashboard.
+
+### 1. Create the Python environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it with `.venv\Scripts\Activate.ps1` on Windows PowerShell or
+Activate it with `.venv\Scripts\Activate.ps1` in Windows PowerShell or
 `source .venv/bin/activate` on macOS/Linux, then install the project:
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+python -m pip install -c constraints.txt -e ".[dev]"
 ```
 
-For the exact direct dependency versions used by the completed study, install with
-`python -m pip install -c constraints.txt -e ".[dev]"`. On an incompatible environment, retrain the
-`joblib` artifacts instead of assuming cross-version scikit-learn compatibility.
+`constraints.txt` records the direct dependency versions used for the completed local study. Saved
+scikit-learn `joblib` artifacts should be retrained if the target environment is incompatible.
 
-Run the commands below from the repository root. Script defaults are resolved from each script's
-location rather than an ambient machine-specific path; explicit path flags support custom locations.
+### 2. Prepare data and model artifacts
 
-## Reproduce the workflow
-
-Dataset preparation, training, and profiling are one-time or intentionally repeated measurement
-steps. The raw dataset and `joblib` files are generated locally rather than required by ordinary
-unit tests.
+These are one-time steps for a new checkout. The downloader reuses a valid existing dataset rather
+than downloading it again.
 
 ```bash
-# Download/reuse and validate the official UCI HAR dataset.
 python scripts/download_uci_har.py
-
-# Train/evaluate three models and verify saved-artifact prediction reload.
-python scripts/train_models.py
-python scripts/verify_models.py
-
-# Physically re-profile this computer (overwrites measured profiles).
-python scripts/profile_models.py --predictions 500
+python scripts/train_models.py --seed 2027
+python scripts/verify_models.py --samples 32
 ```
 
-Run one scenario entirely from the CLI:
+To measure a new physical environment, profile all models after training:
 
 ```bash
-python scripts/run_simulation.py --scenario bursty --scheduler edgeweaver --seed 1
+python scripts/profile_models.py --predictions 500 --warmups 20 --seed 2027
 ```
 
-Run or safely resume the complete study—80 core runs plus 10 scoped ablation runs—and regenerate all
-analysis products:
+Profiling changes the measured inputs and therefore the identity of subsequent experiment runs. It
+is not performed during simulation or ordinary tests.
+
+### 3. Run one simulation
+
+```bash
+python scripts/run_simulation.py --scenario network_slowdown --scheduler edgeweaver --seed 1
+```
+
+The command saves the generated trace under `artifacts/workload_traces/` and writes the raw run,
+event log, and JSON/CSV summary under `experiments/raw/`, `experiments/events/`, and
+`experiments/summaries/`.
+
+### 4. Run or validate the complete study
 
 ```bash
 python scripts/run_experiments.py
 python scripts/run_experiments.py --validate-only
 ```
 
-Regenerate tables, figures, failure cases, and findings from validated saved runs without rerunning
-any simulation:
+The runner resumes valid completed identities by default. It executes the 80 core and 10 ablation
+runs, then regenerates the tables, figures, findings, and failure cases under `experiments/phase7/`.
+To regenerate analysis from existing validated runs without rerunning simulation:
 
 ```bash
 python scripts/generate_research_outputs.py
 ```
 
-Run the normal test and quality checks without downloading or retraining:
-
-```bash
-pytest
-ruff check edgeweaver api scripts tests
-ruff format --check edgeweaver api scripts tests
-mypy edgeweaver api scripts/run_api.py scripts/run_simulation.py \
-  scripts/run_experiments.py scripts/generate_research_outputs.py
-```
-
-## Local research dashboard
-
-The React/Vite interface is a local presentation layer over the same Python simulation,
-scheduler, metrics, and saved-result code used by the command-line workflow. Install and build it
-once, then start the local FastAPI bridge:
+### 5. Build and run the local dashboard
 
 ```bash
 cd frontend
-npm install
+npm ci
 npm run build
 cd ..
 python scripts/run_api.py
 ```
 
-Open `http://127.0.0.1:8000`. The five views cover project/model/device context, one-simulation
-execution, per-request decision inspection, saved scheduler comparisons, and real extracted failure
-cases. The API runs locally without authentication or a database. Interactive simulations are saved
-under `experiments/ui/` and do not modify the validated Phase 7 study.
+Open `http://127.0.0.1:8000`. The dashboard presents model/device context, guided single simulations,
+per-request candidate and decision inspection, paired scheduler comparisons, event playback, and
+extracted failure cases. Interactive runs are isolated under `experiments/ui/`; they do not modify
+the validated study. Viewing saved results does not retrain or re-profile models, while executing a
+new simulation requires the prepared dataset and model artifacts from step 2.
 
-For frontend development, run `python scripts/run_api.py` and `npm run dev` in separate terminals;
-Vite proxies `/api` to the local service. Frontend checks are `npm test` and `npm run build`.
+### 6. Run verification checks
 
-## Results
+```bash
+pytest
+ruff check edgeweaver api scripts tests
+ruff format --check edgeweaver api scripts tests
+mypy edgeweaver api scripts/run_api.py scripts/run_simulation.py scripts/run_experiments.py scripts/generate_research_outputs.py
+```
 
-The completed study contains 80/80 core runs using seeds 1–5 and 10/10 planned ablation runs. Every
-scenario/seed pair reused one trace across schedulers. Mean results across five seeds showed:
+Frontend checks run separately:
 
-- Under network slowdown, deadline satisfaction was 100% for MCT and EdgeWeaver, 93.66% for Round
-  Robin, and 79.90% for Fastest Device. Corresponding mean end-to-end latencies were 0.616, 0.616,
-  50.257, and 124.231 ms, respectively.
-- All four schedulers averaged 100% deadline satisfaction in normal, bursty, and device-slowdown
-  conditions. Fastest Device did queue work during bursts, but the observed queueing was too small to
-  reduce its deadline rate.
-- Every policy selected logistic regression for every assigned request because it was the measured
-  most-accurate model and also the lowest-compute practical choice. Consequently, both EdgeWeaver
-  ablations matched the full policy on the tested metrics: H3 and H4 were inconclusive because model
-  choices did not differ, and H5 was inconclusive because EdgeWeaver did not use the slowed edge
-  server.
-- One of five requested representative case types—a remote network-slowdown miss—was observed. The
-  saved case report marks the four absent types explicitly rather than manufacturing evidence.
+```bash
+cd frontend
+npm test
+npm run build
+```
 
-No parameters, seeds, measured profiles, or valid results were altered or discarded to make a
-hypothesis succeed. See [the report](docs/report.md), [methodology](docs/methodology.md),
-[findings](experiments/phase7/results/findings_summary.md), and
-[aggregate tables](experiments/phase7/results/tables/aggregate_results.csv).
+Ordinary tests use controlled fixtures and do not download UCI HAR, retrain production models, run
+500-sample profiling loops, or execute the full 90-run study.
 
 ## Repository structure
 
 ```text
-edgeweaver/               ML, simulation, schedulers, scenarios, metrics, experiments, analysis
-api/                      Minimal local FastAPI bridge over package logic and saved artifacts
+edgeweaver/               Dataset, ML artifacts, simulation, schedulers, scenarios, metrics, analysis
+api/                      Local FastAPI bridge over package logic and saved artifacts
 frontend/                 React/Vite/TypeScript research dashboard
-configs/                  Devices, network, simulation, scenarios, and experiment matrix
-scripts/                  Dataset, training, profiling, simulation, experiment, analysis CLIs
-artifacts/models/         Generated trained models, preprocessors, and metadata
-artifacts/profiles/       Measured profiles, raw timing observations, environment metadata
-experiments/phase7/       Paired traces, raw runs/events, summaries, tables, figures, findings
-tests/                    Fast unit, integration, determinism, scheduler, and export tests
-docs/                     Methodology, report, demo script, status, and QA handoffs
+configs/                  Device, network, simulation, scenario, and experiment YAML
+scripts/                  Dataset, training, profiling, simulation, experiment, analysis, and API CLIs
+artifacts/profiles/       Measured profiles, raw timings, manifest, and profiling environment
+artifacts/models/         Locally generated preprocessors, estimators, and training metadata
+artifacts/workload_traces/ Replayable request traces
+experiments/phase7/       Paired traces, raw runs/events, summaries, tables, figures, findings, cases
+tests/                    Unit, integration, deterministic-replay, scheduler, metric, and API tests
+docs/                     Methodology, report, demo script, implementation status, and QA handoffs
 ```
 
 ## Limitations
 
-- Only one physical computer was profiled; all other devices use simulated scaling factors.
+- Only one physical computer supplied latency measurements.
+- Mobile, gateway, and edge-server performance is simulated with scaling factors rather than
+  measured on those devices.
 - Energy is an estimated normalized quantity, not measured electricity or joules.
-- Overall test accuracy is used as an approximation for per-request scheduling eligibility.
-- Network behavior is a simplified latency/bandwidth model without packet or transport effects.
-- UCI HAR covers one sensor-classification domain and does not establish general ML behavior.
-- The simulator omits many operating-system, concurrency, thermal, and hardware effects.
-- Five seeds describe this configured study but provide limited statistical resolution.
-- These results do not prove that EdgeWeaver works on production edge infrastructure.
+- Overall held-out model accuracy is used as an approximation for request-level eligibility.
+- The symmetric latency/bandwidth network model omits packets, routing, retransmission, and transport
+  behavior.
+- UCI HAR represents one tabular sensor-classification domain.
+- SimPy does not reproduce all operating-system, concurrency, cache, thermal, or hardware effects.
+- Five seeds provide limited resolution, and the study reports no inferential significance tests.
+- The measured model ordering and low compute utilization left model switching and adaptive slowdown
+  response unexercised in the core experiment.
+- Results from this simulator do not establish performance on production edge infrastructure.
 
-The complete research workflow remains usable from the command line; the local dashboard is an
-additional presentation interface. It is not a deployed or production service.
+## Possible future work
+
+The next research step is physical validation on heterogeneous devices with measured power and
+network traces. Additional model families or domains should create a genuine accuracy/latency/energy
+trade-off so model switching and EWMA adaptation receive treatment variation. Richer network and
+parallel-device models, higher-load scenarios, more seeds, and prespecified inferential analysis
+would improve external validity without changing the current scheduler interface or paired-trace
+design.
