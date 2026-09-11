@@ -7,6 +7,45 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+
+# Test, coverage, and local tool output
+.coverage
+coverage.xml
+htmlcov/
+coverage/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Editor and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local AI-assistant instructions and workspaces
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.agents/
+.claude/
+.codex/
+.gemini/
+
+# Internal planning and phase handoff material
+/edgeweaver-simplified-project-plan.md
+/docs/implementation_status.md
+/docs/qa_checkpoint_*.md
+
+# Regenerable local simulation output; canonical study evidence is in
+# /experiments/phase7/ and remains tracked.
+/experiments/events/
+/experiments/raw/
+/experiments/summaries/
+/artifacts/workload_traces/*.json
+!/artifacts/workload_traces/phase3-representative.json
+
 /artifacts/phase1-fixture-result.json
 /artifacts/models/**/*.joblib
 /data/raw/

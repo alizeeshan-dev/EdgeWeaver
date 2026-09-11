@@ -220,5 +220,5 @@ artifacts/models/         Locally generated preprocessors, estimators, and train
 artifacts/workload_traces/ Replayable request traces
 experiments/phase7/       Paired traces, raw runs/events, summaries, tables, figures, findings, cases
 tests/                    Unit, integration, deterministic-replay, scheduler, metric, and API tests
-docs/                     Methodology, report, demo script, implementation status, and QA handoffs
+docs/                     Research methodology, report, and demonstration script
 ```
